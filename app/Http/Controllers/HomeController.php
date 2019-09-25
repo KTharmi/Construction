@@ -31,13 +31,9 @@ class HomeController extends Controller
         }else if(in_array(3, $roles)){
             return view('CManager.home');
         }else if(in_array(4, $roles)){
-            return view('supervisor.home');
-        }else if(in_array(5, $roles)){
             return view('estimator.home');
-        }else if(in_array(6, $roles)){
+        }else if(in_array(5, $roles)){
             return view('architect.home');
-        }else if(in_array(7, $roles)){
-            return view('CExpeditor.home');
         }
     }
 }

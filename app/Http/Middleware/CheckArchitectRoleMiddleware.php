@@ -18,7 +18,7 @@ class CheckArchitectRoleMiddleware
         $user = auth()->user();
         if($user) {
             $roles = $user->roles->pluck('id')->toArray();
-            if(in_array(6, $roles)){
+            if(in_array(5, $roles)){
                 return $next($request);
             }
         }

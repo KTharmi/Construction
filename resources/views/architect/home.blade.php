@@ -1,4 +1,4 @@
-@extends('admin/app')
+@extends('architect/app')
 @section('main-contend')
 
 <div id="content-wrapper" class="d-flex flex-column">

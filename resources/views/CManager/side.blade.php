@@ -5,7 +5,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">HAYANY Construction <sup>CONSTRUCTION-MANAGER</sup></div>
+        <div class="sidebar-brand-text mx-3">HAYANY Construction <sup>Manager</sup></div>
       </a>
 
       <!-- Divider -->
@@ -15,7 +15,7 @@
       <li class="nav-item active">
         <a class="nav-link" href="{{route('home')}}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard-Construction Manager</span></a>
+          <span>Dashboard Construction-Manager</span></a>
       </li>
 
       <!-- Divider -->
@@ -23,7 +23,7 @@
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Employees -CRUD
+        Laborers -CRUD
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
@@ -33,13 +33,6 @@
           <span>Construction</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header"> Employees:</h6>
-            <a class="collapse-item" href="buttons.html">CREATE</a>
-            <a class="collapse-item" href="cards.html">READ</a>
-            <a class="collapse-item" href="cards.html">UPDATE</a>
-            <a class="collapse-item" href="cards.html">DELETE</a>
-          </div>
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header"> Laborers:</h6>
             <a class="collapse-item" href="buttons.html">CREATE</a>
@@ -83,16 +76,6 @@
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Bills:</h6> 
-            <a class="collapse-item" href="404.html">Labour bill</a>
-            <a class="collapse-item" href="blank.html">Full bill</a>
-            <a class="collapse-item" href="blank.html">Invoice</a>
-            <h6 class="collapse-header">Reports:</h6> 
-            <a class="collapse-item" href="404.html">Project Report</a>
-            <a class="collapse-item" href="blank.html">Anual Report</a>
-            <h6 class="collapse-header">Salaries:</h6> 
-            <a class="collapse-item" href="404.html">Employee</a>
-            <a class="collapse-item" href="blank.html">Laborers</a>
             <h6 class="collapse-header">Schedules:</h6> 
             <a class="collapse-item" href="404.html">Work Schedules</a>
             <a class="collapse-item" href="blank.html">Laborers Schedules</a>

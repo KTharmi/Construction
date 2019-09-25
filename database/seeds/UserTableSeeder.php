@@ -33,12 +33,6 @@ class UserTableSeeder extends Seeder
                 'is_active' => 'Yes',
             ],
             [
-                'username' => 'supervisor1',
-                'email' => 'supervisor1@gmail.com',
-                'password' => Hash::make('ghijkl'),
-                'is_active' => 'Yes',
-            ],
-            [
                 'username' => 'estimator1',
                 'email' => 'estimator1@gmail.com',
                 'password' => Hash::make('ghijkl'),
@@ -49,13 +43,7 @@ class UserTableSeeder extends Seeder
                 'email' => 'architect1@gmail.com',
                 'password' => Hash::make('ghijkl'),
                 'is_active' => 'Yes',
-            ],
-            [
-                'username' => 'CExpeditor1',
-                'email' => 'CExpeditor1@gmail.com',
-                'password' => Hash::make('ghijkl'),
-                'is_active' => 'Yes',
-            ],
+            ]
          ];
          foreach($users as $user){
              App\User::create($user);

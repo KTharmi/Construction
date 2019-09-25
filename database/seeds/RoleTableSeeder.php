@@ -24,16 +24,10 @@ class RoleTableSeeder extends Seeder
                 'role_name' => 'Construction_Manager',
             ],
             [
-                'role_name' => 'supervisor',
-            ],
-            [
                 'role_name' => 'estimator',
             ],
             [
                 'role_name' => 'architect',
-            ],
-            [
-                'role_name' => 'construction_expeditor',
             ]
          ];
          foreach($roles as $role){

@@ -12,7 +12,7 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    @include('admin/side')
+    @include('architect/side')
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
