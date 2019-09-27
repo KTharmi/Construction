@@ -81,15 +81,6 @@
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <!-- <h6 class="collapse-header">Login Screens:</h6><a href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();"  class="btn btn-default btn-flat">Sign out</a>
-                                                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-            <a class="collapse-item" href="register.html">Register</a>
-            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-            <div class="collapse-divider"></div>-->
             <h6 class="collapse-header">Bills:</h6> 
             <a class="collapse-item" href="404.html">Labour bill</a>
             <a class="collapse-item" href="blank.html">Full bill</a>

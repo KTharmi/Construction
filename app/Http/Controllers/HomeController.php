@@ -34,6 +34,8 @@ class HomeController extends Controller
             return view('estimator.home');
         }else if(in_array(5, $roles)){
             return view('architect.home');
+        }else{
+            return view('user.home');
         }
     }
 }
