@@ -18,7 +18,7 @@ class CheckEstimatorRoleMiddleware
         $user = auth()->user();
         if($user) {
             $roles = $user->roles->pluck('id')->toArray();
-            if(in_array(5, $roles)){
+            if(in_array(4, $roles)){
                 return $next($request);
             }
         }

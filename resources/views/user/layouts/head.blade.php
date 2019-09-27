@@ -1,8 +1,8 @@
  <!-- Required meta tags -->
  <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="icon" href="{{asset('user/img/favicon.png')}}" type="image/png">
-        <title>Hajani -Home Builder </title>
+        <link rel="icon" href="{{asset('user/img/logo.jpg')}}" type="image/jpg">
+        <title>Hajany -Home Builder </title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{{asset('user/css/bootstrap.css')}}">
         <link rel="stylesheet" href="{{asset('user/vendors/linericon/style.css')}}">
