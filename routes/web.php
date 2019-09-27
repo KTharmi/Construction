@@ -24,19 +24,17 @@
  });
 
   Auth::routes();
-  Route::get('/home', 'HomeController@index')->name('home');
-//  Route::group(['middleware' => ['auth']],function(){
-//    Route::group(['middleware' =>['admin']],function(){
-//       Route::get('/admin/home', 'HomeController@index')->name('admin.home');
+ Route::get('/home', 'HomeController@index')->name('home');
+   Route::group(['middleware' => ['auth']],function(){
+
+      
+         Route::group(['namespace' =>'Admin', 'prefix' => 'admin/employee'],function(){
+         
+         Route::get('/view', 'EmployeeController@index')->name('admin.employee.view');
+         
+
+     
+   });
 
 
-//    });
-// });
-
-
-//
-// Route::group(['middleware' => ['auth']],function(){
-// });
-// Route::group(['namespace' =>'Admin'],function(){
- //  Route::get('/admin/home', 'HomeController@index')->name('admin.home');
-//});
+   });

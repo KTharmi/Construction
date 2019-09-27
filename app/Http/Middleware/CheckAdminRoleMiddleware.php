@@ -15,6 +15,7 @@ class CheckAdminRoleMiddleware
      */
     public function handle($request, Closure $next)
     {
+        
         $user = auth()->user();
         if($user) {
             $roles = $user->roles->pluck('id')->toArray();
