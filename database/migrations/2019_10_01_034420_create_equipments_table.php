@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMaterialsTable extends Migration
+class CreateEquipmentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateMaterialsTable extends Migration
      */
     public function up()
     {
-        Schema::create('materials', function (Blueprint $table) {
-            $table->bigIncrements('MatId');
-            $table->string('MatName',50);
-            $table->string('MatType',50);
-            $table->double('UnitPrice',8,2);
+        Schema::create('equipments', function (Blueprint $table) {
+            $table->bigIncrements('EquipId');
+            $table->string('EquipName',50);
+            $table->double('Rent',8,2);
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateMaterialsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('materials');
+        Schema::dropIfExists('_equipments');
     }
 }

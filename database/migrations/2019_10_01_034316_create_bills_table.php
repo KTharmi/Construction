@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCompaniesTable extends Migration
+class CreateBillsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateCompaniesTable extends Migration
      */
     public function up()
     {
-        Schema::create('companies', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('Cname',50);
-            $table->unsignedBigInteger('CphoneNo');
-            $table->string('Caddress',50);
+        Schema::create('bills', function (Blueprint $table) {
+            $table->bigIncrements('BillNo');
+            $table->double('Total',8,2);
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateCompaniesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('companies');
+        Schema::dropIfExists('_bills');
     }
 }

@@ -6,7 +6,7 @@
       <br>
       <br>  
       <p>Best service will be provided for houses for contract basis, shops, temple construction works, modern houses and drawings for buildings, electricity connections, pipe lining for building water supply, electric repair works for buildings, suveying works, evaluation reports for buildings</p>
-      <p >⚫Houses for contract basis,shops, temple construction works, modern houses </p>
+      <p>⚫Houses for contract basis,shops, temple construction works, modern houses </p>
       <p>⚫Drawings for buildings </p>
       <p>⚫Electricity connections</p>
       <p>⚫ Pipe lining for water supply of buildings </p>
