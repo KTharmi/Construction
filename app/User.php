@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Role;
+use App\Employee;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -40,5 +41,9 @@ class User extends Authenticatable
     public function roles()
     {
         return $this->belongsToMany(Role::class, 'user_roles');
+    }
+    public function employees()
+    {
+        return $this->belongsTo(Employee::class, 'users');
     }
 }

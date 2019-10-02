@@ -17,7 +17,7 @@ class CreateProjectsTable extends Migration
             $table->bigIncrements('ProId');
             $table->string('ProName');
             $table->string('ProAddress');
-           
+            $table->longtext('description');
             $table->timestamps();
 
             

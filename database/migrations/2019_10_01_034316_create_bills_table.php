@@ -15,6 +15,7 @@ class CreateBillsTable extends Migration
     {
         Schema::create('bills', function (Blueprint $table) {
             $table->bigIncrements('BillNo');
+            $table->string('BillId',50)->index()->unique();
             $table->double('Total',8,2);
             $table->timestamps();
         });
@@ -27,6 +28,6 @@ class CreateBillsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_bills');
+        Schema::dropIfExists('bills');
     }
 }

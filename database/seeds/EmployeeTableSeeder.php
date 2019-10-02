@@ -20,6 +20,24 @@ class EmployeeTableSeeder extends Seeder
              'EmpAddress' => 'Vavunikulam',
              'EmpPhoneNo' => 0774540762,
              'UserId' => 1,
+            ],
+            [
+                'EmpName' => 'Hajani',
+                'EmpAddress' => 'Vavunikulam',
+                'EmpPhoneNo' => 0774540762,
+                'UserId' => 4,
+            ],
+            [
+                'EmpName' => 'Regadepan',
+                'EmpAddress' => 'Jaffna',
+                'EmpPhoneNo' => 0212226451 ,
+                'UserId' => 2,
+            ],
+            [
+                'EmpName' => 'Sarangan',
+                'EmpAddress' => 'Puliyankulam',
+                'EmpPhoneNo' => 0212222134,
+                'UserId' => 5 ,
             ]
 
             ];

@@ -13,7 +13,7 @@ class CreateCustomerProjectsTable extends Migration
      */
     public function up()
     {
-        Schema::create('customer__projects', function (Blueprint $table) {
+        Schema::create('customer_projects', function (Blueprint $table) {
             $table->bigIncrements('ProId');
             $table->string('ProName');
             $table->string('ProAddress');
