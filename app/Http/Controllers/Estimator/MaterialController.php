@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Estimator\BSR;
+namespace App\Http\Controllers\Estimator;
 
+use App\Material;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,8 @@ class MaterialController extends Controller
      */
     public function index()
     {
-        //
+        $materials = Material::all();
+        return view('estimator/material/index', compact('materials'));
     }
 
     /**
@@ -24,7 +26,7 @@ class MaterialController extends Controller
      */
     public function create()
     {
-        //
+        return view('estimator.material.create');
     }
 
     /**
@@ -33,9 +35,15 @@ class MaterialController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MaterialStoreRequest $request)
     {
-        //
+         $material = new Material();
+         $material->setAttribute('MatName', $request->input('MatName'));
+         $material->setAttribute('MatType', $request->input('MatType'));
+         $material->setAttribute('UnitPrice', $request->input('UnitPrice'));
+         $material->save();
+
+         return response()->redirectToRoute('material.index');
     }
 
     /**

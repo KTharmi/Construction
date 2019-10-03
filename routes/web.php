@@ -35,6 +35,14 @@
 
      
    });
+   Route::group(['namespace' =>'Estimator', 'prefix' => 'estimator/material'],function(){
+         
+      Route::get('/view', 'MaterialController@index')->name('estimator.material.view');
+      Route::get('/create', 'MaterialController@create')->name('estimator.material.create');
+      Route::post('/store', 'MaterialController@create')->name('estimator.material.store');
+
+  
+});
 
 
    });
