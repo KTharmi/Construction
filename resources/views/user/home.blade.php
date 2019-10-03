@@ -7,9 +7,9 @@
             	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
 				<div class="container">
 					<div class="banner_content text-center">
-						<h3>Build Your <span>Dream</span></h3>
-						<p>No job too big. No job too small.</p>
-						<p>Listen better. Plan better. Build better.<p>
+						<h3>Build Your Dream <span>With Us</span></h3>
+						<p>We will give live to your dream house</p>
+						<p>Dream better To live better<p>
 					</div>
 				</div>
             </div>
@@ -21,30 +21,52 @@
         	<div class="container">
         		<div class="main_title">
         			<h2>Our Offered Services</h2>
-        			<p>We specialize in new construction. we have an extensive list of qualified contractors. Here are services offered:</p>
+        			<h3>Other than building houses we offer more services to make your house more beautiful</h3>
         		</div>
         		<div class="row services_inner">
         			<div class="col-lg-4">
         				<div class="services_item">
-        					<img src="img/icon/service-icon-1.png" alt="">
-        					<a href="#"><h4>Building Drawings</h4></a>
+        					<img src="{{asset('user/img/architect.jpg')}}" alt="">
+							<a href="#"><h4>Building Drawings</h4></a>
         					<p>The main purpose of construction drawings is to provide a graphic representation of what is to be built. </p>
         				</div>
         			</div>
         			<div class="col-lg-4">
         				<div class="services_item">
-        					<img src="img/icon/service-icon-2.png" alt="">
+						<img src="{{asset('user/img/painter.jpg')}}" alt="">
         					<a href="#"><h4>Painting Constructions</h4></a>
-        					<p>Paint is a liquid or mastic material that can be applied to surfaces to colour, protect and provide texture.</p>
+        					<p>A good paint job beautifies and adds character and personality to your home. it's important to take sufficient time planning which colors, shades, and paint styles you want to decorate your home with.</p>
         				</div>
         			</div>
         			<div class="col-lg-4">
         				<div class="services_item">
-        					<img src="img/icon/service-icon-3.png" alt="">
+						<img src="{{asset('user/img/plumbern.jpg')}}" alt="">
         					<a href="#"><h4>Plumbing Constructions</h4></a>
-        					<p> system of pipes and fixtures installed in a building for the distribution and use of potable (drinkable) water and the removal of waterborne wastes. It is usually distinguished from water and sewage systems that serve a group of buildings or a city.</p>
+        					<p> Plumbing uses pipes, valves, plumbing fixtures, tanks, and other apparatuses to convey fluids.</p>
         				</div>
         			</div>
+					<div class="col-lg-4">
+        				<div class="services_item">
+        					<img src="{{asset('user/img/electrician.jpg')}}" alt="">
+							<a href="#"><h4>Electrical Services</h4></a>
+        					<p>You can get help of our electricians for installing electric switches, switchboards, fans, and appliances.</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-4">
+        				<div class="services_item">
+						<img src="{{asset('user/img/roofing.jpg')}}" alt="">
+        					<a href="#"><h4>Roofing Constructions</h4></a>
+        					<p>A healthy roof protects your home from the elements, saves energy, helps avoid serious leaks, adds curb appeal and value and can even help keep your family healthy.</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-4">
+        				<div class="services_item">
+						<img src="{{asset('user/img/tiles.jpg')}}" alt="">
+        					<a href="#"><h4>Tiles Fitting</h4></a>
+        					<p>These tiles have a number of qualities that make them perfect for tiling almost any part of the building. Delivering thermal, chemical, and mechanical characteristics, ceramic tiles are resistant to impact, force, stain, and water absorption.</p>
+        				</div>
+        			</div>
+					
         		</div>
         	</div>
         </section>
@@ -53,22 +75,29 @@
         <!--================Builder Image Area =================-->
         <seciton class="builder_area">
         	<div class="main_title">
-        		<h2>Our Latest Projects</h2>
-        		<p>Who are in extremely love with eco friendly system.</p>
+        		<h3>Our Latest Projects</h3>
+        		
         	</div>
 			<div class="row m0 builder_inner">
 				<div class="builder_item">
-					<img src="img/builder/builder-1.jpg" alt="">
+				<img src="{{asset('user/img/1.jpg')}}" alt="">
 					<div class="hover">
-						<h4>Alex Complex for Residence</h4>
-						<p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have allowed humanity to create  slimmer.</p>
+						<h4>House Project 1</h4>
+						<p>Sangaththanai, Chavakachcheri</p>
 					</div>
 				</div>
 				<div class="builder_item">
-					<img src="img/builder/builder-2.jpg" alt="">
+				<img src="{{asset('user/img/6.jpg')}}" alt="">
 					<div class="hover">
-						<h4>Alex Complex for Residence</h4>
-						<p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have allowed humanity to create  slimmer.</p>
+						<h4>House Project 2</h4>
+						<p>Kaithady , Jaffna</p>
+					</div>
+				</div>
+				<div class="builder_item">
+				<img src="{{asset('user/img/5.jpg')}}" alt="">
+					<div class="hover">
+						<h4>House Project 3</h4>
+						<p>Avarangal, Pointpedro</p>
 					</div>
 				</div>
 				
