@@ -21,7 +21,15 @@ class DatabaseSeeder extends Seeder
              MaterialTableSeeder::class,
              LabourerTableSeeder::class,
              BillTableSeeder::class,
+<<<<<<< HEAD
              //EquipmentTableSeeder::class,
+=======
+<<<<<<< HEAD
+            // EquipmentTableSeeder::class,
+=======
+             //EquipmentTableSeeder::class,
+>>>>>>> 96c07bc00e5d00dafabc9e436a45736786c27836
+>>>>>>> e979a7c2908120eb696bec0f800fcf8cc9d20396
          ]);
     }
 }

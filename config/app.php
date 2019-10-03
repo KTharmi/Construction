@@ -139,6 +139,7 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+        NetoJose\Bootstrap4Forms\Bootstrap4FormsServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -190,7 +191,7 @@ return [
     */
 
     'aliases' => [
-
+        'Form' => NetoJose\Bootstrap4Forms\Bootstrap4FormsFacade::class,
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
@@ -227,7 +228,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => NetoJose\Bootstrap4Forms\Bootstrap4FormsFacade::class,
+<<<<<<< HEAD
 
+=======
+>>>>>>> e979a7c2908120eb696bec0f800fcf8cc9d20396
     ],
 
 ];
