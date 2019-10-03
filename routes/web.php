@@ -32,6 +32,7 @@
          
          Route::get('/view', 'EmployeeController@index')->name('admin.employee.view');
          
+         Route::get('/create', 'EmployeeController@create')->name('admin.employee.create');
 
      
    });
