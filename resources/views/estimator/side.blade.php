@@ -52,13 +52,15 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-wrench"></i>
-          <span>BOQ</span>
+          <span>Cost Estimating</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Material invoice:</h6>
-            <a class="collapse-item" href="buttons.html">CREATE</a>
-            <h6 class="collapse-header">Laborer invoice:</h6>
+            <h6 class="collapse-header">Material Estimating:</h6>
+            <a class="collapse-item" href="{{route('estimator.estimate.material')}}">CREATE</a>
+            <h6 class="collapse-header">Labourer Estimating:</h6>
+            <a class="collapse-item" href="{{route('estimator.estimate.labourer')}}">CREATE</a>
+            <h6 class="collapse-header">Total Estimating:</h6>
             <a class="collapse-item" href="buttons.html">CREATE</a>
           </div>
         </div>

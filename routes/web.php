@@ -23,19 +23,34 @@
     Route::get('/elements', 'Page\ElementsController@index')->name('user.elements');
  });
 
-  Auth::routes();
- Route::get('/home', 'HomeController@index')->name('home');
+   Auth::routes();
+   Route::get('/home', 'HomeController@index')->name('home');
    Route::group(['middleware' => ['auth']],function(){
 
       
-         Route::group(['namespace' =>'Admin', 'prefix' => 'admin/employee'],function(){
-         
+   Route::group(['namespace' =>'Admin', 'prefix' => 'admin/employee'],function(){
+   
          Route::get('/view', 'EmployeeController@index')->name('admin.employee.view');
          
          Route::get('/create', 'EmployeeController@create')->name('admin.employee.create');
 
      
    });
+
+   Route::group(['namespace' =>'Admin', 'prefix' => 'admin/labourer'],function(){
+         
+      Route::get('/view', 'LabourerController@index')->name('admin.labourer.view');
+      Route::get('/create', 'LabourerController@create')->name('admin.labourer.create');
+      Route::post('/', 'LabourerController@store')->name('admin.labourer.store');
+      Route::get('/{labourer}/edit', 'LabourerController@edit')->name('admin.labourer.edit');
+      Route::patch('/update/{labourer}', 'LabourerController@update')->name('admin.labourer.update');
+      Route::get('/delete/{labourer}', 'LabourerController@delete')->name('admin.labourer.delete');
+      Route::delete('destroy/{labourer}', 'LabourerController@destroy')->name('admin.labourer.destroy');
+  
+   });
+
+
+
    Route::group(['namespace' =>'Estimator', 'prefix' => 'estimator/material'],function(){
          
       Route::get('/view', 'MaterialController@index')->name('estimator.material.view');
@@ -70,5 +85,13 @@
       Route::delete('destroy/{work}', 'WorkController@destroy')->name('estimator.task.destroy');
   
    });
+   Route::group(['namespace' =>'Estimator', 'prefix' => 'estimator/estimate'],function(){
+         
+      Route::get('/materials', 'MaterialEstimateController@index')->name('estimator.estimate.material');
+
+      Route::get('/labourers', 'LabourerEstimateController@index')->name('estimator.estimate.labourer');
+  
+   });
+
 
    });
