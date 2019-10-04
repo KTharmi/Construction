@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class MaterialStoreRequest extends FormRequest
+class LabourerStoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,7 @@ class MaterialStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            
+            //
         ];
     }
 }

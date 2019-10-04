@@ -21,10 +21,7 @@
       <!-- Divider -->
       <hr class="sidebar-divider">
 
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        BSR
-      </div>
+      
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
@@ -34,18 +31,19 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header"> Material:</h6>
+            <h6 class="collapse-header"> Materials:</h6>
             <a class="collapse-item" href="{{route('estimator.material.create')}}">CREATE</a>
             <a class="collapse-item" href="{{route('estimator.material.view')}}">READ</a>
-            <a class="collapse-item" href="cards.html">UPDATE</a>
-            <a class="collapse-item" href="cards.html">DELETE</a>
           </div>
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header"> Laborers:</h6>
-            <a class="collapse-item" href="buttons.html">CREATE</a>
-            <a class="collapse-item" href="cards.html">READ</a>
-            <a class="collapse-item" href="cards.html">UPDATE</a>
-            <a class="collapse-item" href="cards.html">DELETE</a>
+            <h6 class="collapse-header"> Labourers:</h6>
+            <a class="collapse-item" href="{{route('estimator.labourer.create')}}">CREATE</a>
+            <a class="collapse-item" href="{{route('estimator.labourer.view')}}">READ</a>
+          </div>
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header"> Tasks:</h6>
+            <a class="collapse-item" href="{{route('estimator.task.create')}}">CREATE</a>
+            <a class="collapse-item" href="{{route('estimator.task.view')}}">READ</a>
           </div>
         </div>
       </li>

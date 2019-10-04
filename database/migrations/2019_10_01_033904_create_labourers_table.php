@@ -14,10 +14,9 @@ class CreateLabourersTable extends Migration
     public function up()
     {
         Schema::create('labourers', function (Blueprint $table) {
-            $table->bigIncrements('LabId');
+            $table->bigIncrements('id');
             $table->string('LabName',50);
             $table->string('LabType',50);
-            $table->double('Salary',8,2);
             $table->unsignedBigInteger('LabPhoneNo');
             $table->timestamps();
         });

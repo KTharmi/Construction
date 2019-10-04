@@ -10,7 +10,7 @@
                     {!! Form::text('MatName', 'Material Name')->placeholder('enter the material name') !!}
                     {!! Form::text('MatType', 'Material Type')->placeholder('enter the material type') !!}
                     {!! Form::text('UnitPrice', 'UnitPrice')->placeholder('enter the material unitprice') !!}
-                    {!! Form::submit("Add") !!}
+                    {!! Form::submit("Save") !!}
                     {!! Form::close() !!}
                 </div>
     </section>

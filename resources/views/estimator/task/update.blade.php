@@ -3,13 +3,13 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content">
-            <h3>Edit Material details</h3>
+            <h3>Edit Task details</h3>
             <div class="card">
                 <div class="card-body pad">
-                    {!! Form::open() ->route('estimator.material.update' , ['material' => $material->id])->patch()->fill($material) !!}
-                    {!! Form::text('MatName', 'Material Name') !!}
-                    {!! Form::text('MatType', 'Material Type') !!}
-                    {!! Form::text('UnitPrice', 'UnitPrice') !!}
+                    {!! Form::open() ->route('estimator.task.update' , ['work' => $work->id])->patch()->fill($work) !!}
+                    {!! Form::text('task', 'Task Name') !!}
+                    {!! Form::text('description', 'Task Description') !!}
+                    {!! Form::text('rate', 'Rate') !!}
                     {!! Form::submit("Update") !!}
                     {!! Form::close() !!}
                 </div>

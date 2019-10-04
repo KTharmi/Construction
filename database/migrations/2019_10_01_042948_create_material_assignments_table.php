@@ -21,7 +21,7 @@ class CreateMaterialAssignmentsTable extends Migration
             $table->timestamps();
 
             $table->foreign('MatId')
-            ->references('MatId')->on('materials')
+            ->references('id')->on('materials')
             ->onDelete('cascade');
 
             $table->foreign('ProId')

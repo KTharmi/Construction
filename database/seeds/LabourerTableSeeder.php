@@ -15,7 +15,6 @@ class LabourerTableSeeder extends Seeder
             [
              'LabName' => 'Ragu',
              'LabType' => 'meson',
-             'Salary' => '1500',
              'LabPhoneNo' =>'0771002230'
             ]
 

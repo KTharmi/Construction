@@ -6,10 +6,10 @@
             <h3>Edit Material details</h3>
             <div class="card">
                 <div class="card-body pad">
-                    {!! Form::open() ->route('estimator.material.update' , ['material' => $material->id])->patch()->fill($material) !!}
-                    {!! Form::text('MatName', 'Material Name') !!}
-                    {!! Form::text('MatType', 'Material Type') !!}
-                    {!! Form::text('UnitPrice', 'UnitPrice') !!}
+                    {!! Form::open() ->route('estimator.labourer.update' , ['labourer' => $labourer->id])->patch()->fill($labourer) !!}
+                    {!! Form::text('LabName', 'Labourer Name') !!}
+                    {!! Form::text('LabType', 'Labourer Type') !!}
+                    {!! Form::text('LabPhoneNo', 'Labourer PhoneNo') !!}
                     {!! Form::submit("Update") !!}
                     {!! Form::close() !!}
                 </div>

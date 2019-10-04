@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Estimator;
 
 use App\Material;
+use App\Http\Requests\MaterialStoreRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -27,12 +28,13 @@ class MaterialController extends Controller
     public function create()
     {
         return view('estimator.material.create');
+        
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\MaterialStoreRequest $request
      * @return \Illuminate\Http\Response
      */
     public function store(MaterialStoreRequest $request)
@@ -43,7 +45,7 @@ class MaterialController extends Controller
          $material->setAttribute('UnitPrice', $request->input('UnitPrice'));
          $material->save();
 
-         return response()->redirectToRoute('material.index');
+         return response()->redirectToRoute('estimator.material.view');
     }
 
     /**
@@ -63,9 +65,9 @@ class MaterialController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Material $material)
     {
-        //
+        return view('estimator.material.update',compact('material'));
     }
 
     /**
@@ -75,9 +77,14 @@ class MaterialController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Material $material ,Request $request)
     {
-        //
+         $material->setAttribute('MatName', $request->input('MatName'));
+         $material->setAttribute('MatType', $request->input('MatType'));
+         $material->setAttribute('UnitPrice', $request->input('UnitPrice'));
+         $material->save();
+
+         return response()->redirectToRoute('estimator.material.view');
     }
 
     /**
@@ -86,8 +93,13 @@ class MaterialController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete(Material $material)
     {
-        //
+        return view('estimator.material.delete', compact('material'));
+    }
+    public function destroy(Material $material ,Request $request)
+    {
+        $material->delete();
+        return response()->redirectToRoute('estimator.material.view');
     }
 }

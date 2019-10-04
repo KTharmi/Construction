@@ -40,10 +40,35 @@
          
       Route::get('/view', 'MaterialController@index')->name('estimator.material.view');
       Route::get('/create', 'MaterialController@create')->name('estimator.material.create');
-      Route::post('/store', 'MaterialController@create')->name('estimator.material.store');
-
+      Route::post('/', 'MaterialController@store')->name('estimator.material.store');
+      Route::get('/{material}/edit', 'MaterialController@edit')->name('estimator.material.edit');
+      Route::patch('/update/{material}', 'MaterialController@update')->name('estimator.material.update');
+      Route::get('/delete/{material}', 'MaterialController@delete')->name('estimator.material.delete');
+      Route::delete('destroy/{material}', 'MaterialController@destroy')->name('estimator.material.destroy');
   
-});
+   });
 
+   Route::group(['namespace' =>'Estimator', 'prefix' => 'estimator/labourer'],function(){
+         
+      Route::get('/view', 'LabourerController@index')->name('estimator.labourer.view');
+      Route::get('/create', 'LabourerController@create')->name('estimator.labourer.create');
+      Route::post('/', 'LabourerController@store')->name('estimator.labourer.store');
+      Route::get('/{labourer}/edit', 'LabourerController@edit')->name('estimator.labourer.edit');
+      Route::patch('/update/{labourer}', 'LabourerController@update')->name('estimator.labourer.update');
+      Route::get('/delete/{labourer}', 'LabourerController@delete')->name('estimator.labourer.delete');
+      Route::delete('destroy/{labourer}', 'LabourerController@destroy')->name('estimator.labourer.destroy');
+  
+   });
+   Route::group(['namespace' =>'Estimator', 'prefix' => 'estimator/task'],function(){
+         
+      Route::get('/view', 'WorkController@index')->name('estimator.task.view');
+      Route::get('/create', 'WorkController@create')->name('estimator.task.create');
+      Route::post('/', 'WorkController@store')->name('estimator.task.store');
+      Route::get('/{work}/edit', 'WorkController@edit')->name('estimator.task.edit');
+      Route::patch('/update/{work}', 'WorkController@update')->name('estimator.task.update');
+      Route::get('/delete/{work}', 'WorkController@delete')->name('estimator.task.delete');
+      Route::delete('destroy/{work}', 'WorkController@destroy')->name('estimator.task.destroy');
+  
+   });
 
    });

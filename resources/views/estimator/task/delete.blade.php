@@ -4,7 +4,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
     <div class="box-header">
-              <h3 class="box-title">Delete A Material</h3>
+              <h3 class="box-title">Delete A Task</h3>
             </div>
       
     </section>
@@ -13,15 +13,15 @@
     <section class="content">
     <div class="row">
         <div class="col-md-12">
-            <h3>Delete Material</h3>
+            <h3>Delete Task</h3>
             <div class="card">
                 <div class="card-body pad">
                 <div class="panel-heading">Are you sure?</div>
-                        <div class="panel-body">{{ $material->MatName }}</div>
-                        {!!Form::open()->method('delete')->route('estimator.material.destroy', ['material' => $material->id])!!}
-                        {!!Form::hidden('id')->value($material->id)!!}
+                        <div class="panel-body">{{ $work->task }}</div>
+                        {!!Form::open()->method('delete')->route('estimator.task.destroy', ['work' => $work->id])!!}
+                        {!!Form::hidden('id')->value($work->id)!!}
                         {!!Form::submit('Delete')->danger()!!}
-                        {!!Form::anchor("Cancel")->route('estimator.material.view')!!}
+                        {!!Form::anchor("Cancel")->route('estimator.task.view')!!}
                         {!!Form::close()!!}
                 </div>
             </div>

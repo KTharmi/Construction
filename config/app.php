@@ -228,10 +228,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => NetoJose\Bootstrap4Forms\Bootstrap4FormsFacade::class,
-<<<<<<< HEAD
-
-=======
->>>>>>> e979a7c2908120eb696bec0f800fcf8cc9d20396
     ],
-
+   
 ];
