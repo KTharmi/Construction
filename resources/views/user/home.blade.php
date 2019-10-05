@@ -110,7 +110,7 @@
         	<div class="container">
         		<div class="main_title">
         			<h2>Meet Our Expert Members</h2>
-        			<p>Who are in extremely love with eco friendly system.</p>
+        			<p>Get our experts' advice before starting your dream project</p>
         		</div>
         		<div class="row team_inner">
         			<div class="col-lg-3 col-sm-6">
@@ -120,12 +120,12 @@
         						<div class="hover">
         							<a href="#"><i class="fa fa-facebook"></i></a>
         							<a href="#"><i class="fa fa-twitter"></i></a>
-        							<a href="#"><i class="fa fa-linkedin"></i></a>
+        							
         						</div>
         					</div>
         					<div class="team_name">
-        						<h4>Ethel Davis</h4>
-        						<p>Managing Director (Sales)</p>
+        						<h4>Pragash</h4>
+        						<p>Owner Of The Company</p>
         					</div>
         				</div>
         			</div>
@@ -136,12 +136,12 @@
         						<div class="hover">
         							<a href="#"><i class="fa fa-facebook"></i></a>
         							<a href="#"><i class="fa fa-twitter"></i></a>
-        							<a href="#"><i class="fa fa-linkedin"></i></a>
+        							
         						</div>
         					</div>
         					<div class="team_name">
-        						<h4>Ethel Davis</h4>
-        						<p>Managing Director (Sales)</p>
+        						<h4>Hajany</h4>
+        						<p>Architect</p>
         					</div>
         				</div>
         			</div>
@@ -152,12 +152,12 @@
         						<div class="hover">
         							<a href="#"><i class="fa fa-facebook"></i></a>
         							<a href="#"><i class="fa fa-twitter"></i></a>
-        							<a href="#"><i class="fa fa-linkedin"></i></a>
+        							
         						</div>
         					</div>
         					<div class="team_name">
-        						<h4>Ethel Davis</h4>
-        						<p>Managing Director (Sales)</p>
+        						<h4>Rega Theepan</h4>
+        						<p>Site Engineer</p>
         					</div>
         				</div>
         			</div>
@@ -168,12 +168,12 @@
         						<div class="hover">
         							<a href="#"><i class="fa fa-facebook"></i></a>
         							<a href="#"><i class="fa fa-twitter"></i></a>
-        							<a href="#"><i class="fa fa-linkedin"></i></a>
+        							
         						</div>
         					</div>
         					<div class="team_name">
-        						<h4>Ethel Davis</h4>
-        						<p>Managing Director (Sales)</p>
+        						<h4>Sarangan</h4>
+        						<p>Site Engineer</p>
         					</div>
         				</div>
         			</div>
