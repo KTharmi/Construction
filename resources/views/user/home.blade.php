@@ -116,10 +116,10 @@
         			<div class="col-lg-3 col-sm-6">
         				<div class="team_item">
         					<div class="team_img">
-        						<img class="img-fluid" src="img/team/team-1.jpg" alt="">
+        						<img class="img-fluid" src="{{asset('user/img/team/team-2.jpg')}}" alt="">
         						<div class="hover">
         							<a href="#"><i class="fa fa-facebook"></i></a>
-        							<a href="#"><i class="fa fa-twitter"></i></a>
+        							
         							
         						</div>
         					</div>
@@ -132,10 +132,10 @@
         			<div class="col-lg-3 col-sm-6">
         				<div class="team_item">
         					<div class="team_img">
-        						<img class="img-fluid" src="img/team/team-2.jpg" alt="">
+        						<img class="img-fluid" src="{{asset('user/img/team/team-4.jpg')}}" alt="">
         						<div class="hover">
         							<a href="#"><i class="fa fa-facebook"></i></a>
-        							<a href="#"><i class="fa fa-twitter"></i></a>
+        							
         							
         						</div>
         					</div>
@@ -148,10 +148,10 @@
         			<div class="col-lg-3 col-sm-6">
         				<div class="team_item">
         					<div class="team_img">
-        						<img class="img-fluid" src="img/team/team-3.jpg" alt="">
+        						<img class="img-fluid" src="{{asset('user/img/team/team-1.jpg')}}" alt="">
         						<div class="hover">
         							<a href="#"><i class="fa fa-facebook"></i></a>
-        							<a href="#"><i class="fa fa-twitter"></i></a>
+        							
         							
         						</div>
         					</div>
@@ -164,10 +164,10 @@
         			<div class="col-lg-3 col-sm-6">
         				<div class="team_item">
         					<div class="team_img">
-        						<img class="img-fluid" src="img/team/team-4.jpg" alt="">
+        						<img class="img-fluid" src="{{asset('user/img/team/team-3.jpg')}}" alt="">
         						<div class="hover">
         							<a href="#"><i class="fa fa-facebook"></i></a>
-        							<a href="#"><i class="fa fa-twitter"></i></a>
+        							
         							
         						</div>
         					</div>
@@ -196,11 +196,11 @@
         			</div>
         			<div class="counter_item">
         				<h4 class="counter">5962</h4>
-        				<p>Total Tasks Completed</p>
+        				<p>On Going Projects</p>
         			</div>
         			<div class="counter_item">
         				<h4 class="counter">1009</h4>
-        				<p>Cups of Coffee Taken</p>
+        				<p>Future Projects</p>
         			</div>
         			<div class="counter_item">
         				<h4 class="counter">435</h4>
