@@ -33,17 +33,13 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header"> Employees:</h6>
-            <a class="collapse-item" href="buttons.html">CREATE</a>
+            <a class="collapse-item" href="{{route('admin.employee.create')}}">CREATE</a>
             <a class="collapse-item" href="{{route('admin.employee.view')}}">READ</a>
-            <a class="collapse-item" href="cards.html">UPDATE</a>
-            <a class="collapse-item" href="cards.html">DELETE</a>
           </div>
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header"> Laborers:</h6>
-            <a class="collapse-item" href="buttons.html">CREATE</a>
-            <a class="collapse-item" href="cards.html">READ</a>
-            <a class="collapse-item" href="cards.html">UPDATE</a>
-            <a class="collapse-item" href="cards.html">DELETE</a>
+            <a class="collapse-item" href="{{route('admin.labourer.create')}}">CREATE</a>
+            <a class="collapse-item" href="{{route('admin.labourer.view')}}">READ</a>
           </div>
         </div>
       </li>

@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Estimator;
 
+use App\Labourer;
+use App\Http\Requests\LabourerStoreRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class LaborerController extends Controller
+class LabourerEstimateController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +16,7 @@ class LaborerController extends Controller
      */
     public function index()
     {
-        //
+        return view('estimator.estimate.labourerEstimate');
     }
 
     /**

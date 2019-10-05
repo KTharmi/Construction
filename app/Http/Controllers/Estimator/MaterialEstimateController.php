@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Estimator\BSR;
+namespace App\Http\Controllers\Estimator;
 
+use App\Material;
+use App\Http\Requests\MaterialStoreRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class MaterialController extends Controller
+class MaterialEstimateController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +16,7 @@ class MaterialController extends Controller
      */
     public function index()
     {
-        //
+        return view('estimator.estimate.materialEstimate');
     }
 
     /**

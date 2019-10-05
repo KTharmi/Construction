@@ -3,7 +3,7 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('home')}}">
         <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
+          
         </div>
         <div class="sidebar-brand-text mx-3">HAYANY Construction <sup>Estimator</sup></div>
       </a>
@@ -21,31 +21,29 @@
       <!-- Divider -->
       <hr class="sidebar-divider">
 
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        BSR
-      </div>
+      
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
-          <span>Construction BSR</span>
+          <span> Schedule of Rates</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header"> Material:</h6>
-            <a class="collapse-item" href="buttons.html">CREATE</a>
-            <a class="collapse-item" href="cards.html">READ</a>
-            <a class="collapse-item" href="cards.html">UPDATE</a>
-            <a class="collapse-item" href="cards.html">DELETE</a>
+            <h6 class="collapse-header"> Materials:</h6>
+            <a class="collapse-item" href="{{route('estimator.material.create')}}">CREATE</a>
+            <a class="collapse-item" href="{{route('estimator.material.view')}}">READ</a>
           </div>
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header"> Laborers:</h6>
-            <a class="collapse-item" href="buttons.html">CREATE</a>
-            <a class="collapse-item" href="cards.html">READ</a>
-            <a class="collapse-item" href="cards.html">UPDATE</a>
-            <a class="collapse-item" href="cards.html">DELETE</a>
+            <h6 class="collapse-header"> Labourers:</h6>
+            <a class="collapse-item" href="{{route('estimator.labourer.create')}}">CREATE</a>
+            <a class="collapse-item" href="{{route('estimator.labourer.view')}}">READ</a>
+          </div>
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header"> Tasks:</h6>
+            <a class="collapse-item" href="{{route('estimator.task.create')}}">CREATE</a>
+            <a class="collapse-item" href="{{route('estimator.task.view')}}">READ</a>
           </div>
         </div>
       </li>
@@ -54,13 +52,15 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-wrench"></i>
-          <span>BOQ</span>
+          <span>Cost Estimating</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Material invoice:</h6>
-            <a class="collapse-item" href="buttons.html">CREATE</a>
-            <h6 class="collapse-header">Laborer invoice:</h6>
+            <h6 class="collapse-header">Material Estimating:</h6>
+            <a class="collapse-item" href="{{route('estimator.estimate.material')}}">CREATE</a>
+            <h6 class="collapse-header">Labourer Estimating:</h6>
+            <a class="collapse-item" href="{{route('estimator.estimate.labourer')}}">CREATE</a>
+            <h6 class="collapse-header">Total Estimating:</h6>
             <a class="collapse-item" href="buttons.html">CREATE</a>
           </div>
         </div>

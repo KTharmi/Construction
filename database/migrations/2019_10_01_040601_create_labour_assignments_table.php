@@ -18,10 +18,11 @@ class CreateLabourAssignmentsTable extends Migration
             $table->unsignedBigInteger('LabId')->index()->unique();
             $table->unsignedBigInteger('ProId')->index()->unique();
             $table->double('WorkingHours',4,2);
+            $table->double('Salary',8,2);
             $table->timestamps();
 
             $table->foreign('LabId')
-            ->references('LabId')->on('labourers')
+            ->references('id')->on('labourers')
             ->onDelete('cascade');
 
             $table->foreign('ProId')
