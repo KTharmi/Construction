@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use App\Projects;
+use App\Http\Requests\ProjectStoreRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        $project = Project::all();
+        return view('admin/project/index', compact('projects'));
     }
 
     /**
@@ -24,19 +26,27 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.project.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\ProjectStoreRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProjectStoreRequest $request)
     {
-        //
+        $project = new Project();
+        $project->setAttribute('ProId', $request->input('ProId'));
+        $project->setAttribute('ProName', $request->input('ProName'));
+        $project->setAttribute('ProAddress', $request->input('ProAddress'));
+        $project->setAttribute('describtion', $request->input('describtion'));
+        $project->save();
+
+        return response()->redirectToRoute('admin.project.view');
     }
+
 
     /**
      * Display the specified resource.
@@ -55,9 +65,9 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Project $Project)
     {
-        //
+        return view('estimator.project.update',compact('project'));
     }
 
     /**
@@ -67,9 +77,15 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProjectStoreRequest $request, Project $Project)
     {
-        //
+        $project->setAttribute('ProId', $request->input('ProId'));
+        $project->setAttribute('ProName', $request->input('ProName'));
+        $project->setAttribute('ProAddress', $request->input('ProAddress'));
+        $project->setAttribute('describtion', $request->input('describtion'));
+        $project->save();
+
+        return response()->redirectToRoute('admin.project.view');
     }
 
     /**
@@ -78,8 +94,14 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete(Project $project)
     {
-        //
+        return view('admin.project.delete', compact('project'));
+    }
+    public function destroy(ProjectStoreRequest $request, Project $project)
+    {
+        $project->delete();
+        return response()->redirectToRoute('admin.project.view');
     }
 }
+
