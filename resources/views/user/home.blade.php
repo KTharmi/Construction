@@ -216,43 +216,43 @@
         	<div class="container">
         		<div class="main_title">
         			<h2>Some Features that Made us Unique</h2>
-        			<p>Who are in extremely love with eco friendly system.</p>
+        			<p>This is how we outshine in our industry </p>
         		</div>
         		<div class="row feature_inner">
         			<div class="col-lg-4 col-md-6">
         				<div class="feature_item">
         					<h4><i class="lnr lnr-user"></i>Expert Technicians</h4>
-        					<p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+        					<p>We have well performing techinicians who are very talented in construction works</p>
         				</div>
         			</div>
         			<div class="col-lg-4 col-md-6">
         				<div class="feature_item">
         					<h4><i class="lnr lnr-license"></i>Professional Service</h4>
-        					<p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+        					<p>We give more services professionaly to our customers</p>
         				</div>
         			</div>
         			<div class="col-lg-4 col-md-6">
         				<div class="feature_item">
         					<h4><i class="lnr lnr-phone"></i>Great Support</h4>
-        					<p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+        					<p>We will give such a great support to build your dream building</p>
         				</div>
         			</div>
         			<div class="col-lg-4 col-md-6">
         				<div class="feature_item">
         					<h4><i class="lnr lnr-rocket"></i>Technical Skills</h4>
-        					<p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+        					<p>We are much talented in technical side</p>
         				</div>
         			</div>
         			<div class="col-lg-4 col-md-6">
         				<div class="feature_item">
         					<h4><i class="lnr lnr-diamond"></i>Highly Recomended</h4>
-        					<p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+        					<p>We are highly recommended in our surrounding areas</p>
         				</div>
         			</div>
         			<div class="col-lg-4 col-md-6">
         				<div class="feature_item">
         					<h4><i class="lnr lnr-bubble"></i>Positive Reviews</h4>
-        					<p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+        					<p>Almost all our clients are really happy in seeing the final output and giving positive reviews</p>
         				</div>
         			</div>
         		</div>
