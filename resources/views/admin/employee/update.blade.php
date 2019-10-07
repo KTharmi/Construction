@@ -13,7 +13,7 @@
               
             <!-- /.box-header -->
    
-            {!! Form::open() !!}
+            {!! Form::open()->route('admin.employee.update' , ['employee' => $employee->id])->patch()->fill($employee) !!}
             {!! Form::text('EmpName', 'Name')->placeholder('enter the employee name') !!}
             {!! Form::text('EmpId', 'Id')->placeholder('enter the employee id') !!}
             {!! Form::text('EmpAddress', 'Address')->placeholder('enter the employee address') !!}

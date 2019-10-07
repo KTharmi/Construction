@@ -31,9 +31,12 @@
    Route::group(['namespace' =>'Admin', 'prefix' => 'admin/employee'],function(){
    
          Route::get('/view', 'EmployeeController@index')->name('admin.employee.view');
-         
          Route::get('/create', 'EmployeeController@create')->name('admin.employee.create');
-
+         Route::post('/', 'EmployeeController@store')->name('admin.employee.store');
+         Route::get('/{employee}/edit', 'EmployeeController@edit')->name('admin.employee.edit');
+         Route::patch('/update/{employee}', 'EmployeeController@update')->name('admin.employee.update');
+         Route::get('/delete/{employee}', 'EmployeeController@delete')->name('admin.employee.delete');
+         Route::delete('destroy/{employee}', 'EmployeeController@destroy')->name('admin.employee.destroy');
      
    });
 

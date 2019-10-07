@@ -55,8 +55,6 @@
             <h6 class="collapse-header">Construction Utilities:</h6>
             <a class="collapse-item" href="buttons.html">CREATE</a>
             <a class="collapse-item" href="cards.html">READ</a>
-            <a class="collapse-item" href="cards.html">UPDATE</a>
-            <a class="collapse-item" href="cards.html">DELETE</a>
           </div>
         </div>
       </li>

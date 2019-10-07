@@ -2,23 +2,20 @@
 @section('main-contend')
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-    <div class="box-header">
-              <h3 class="box-title">Add New Employee</h3>
-            </div> 
-    </section>
-
-    <!-- Main content -->
     <section class="content">
-              
-            <!-- /.box-header -->
-   
-            {!! Form::open() !!}
+            <h3>Create Labourer</h3>
+            <div class="card">
+                <div class="card-body pad">
+            {!! Form::open() ->route('admin.employee.store') !!}
             {!! Form::text('EmpName', 'Name')->placeholder('enter the employee name') !!}
             {!! Form::text('EmpId', 'Id')->placeholder('enter the employee id') !!}
             {!! Form::text('EmpAddress', 'Address')->placeholder('enter the employee address') !!}
             {!! Form::text('EmpPhoneNo', 'Phone No')->placeholder('enter the employee phone no') !!}
             {!! Form::text('UserId', 'Roll')->placeholder('enter the user id') !!}
+            {!! Form::submit("Save") !!}
             {!! Form::close() !!}
-    <a href="3" class="btn btn-success col-lg-offset ">SUBMIT</a>     
+            </div>
+    </section>
+    
+    </div>        
 @endsection 
