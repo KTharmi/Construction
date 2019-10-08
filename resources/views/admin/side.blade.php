@@ -41,6 +41,11 @@
             <a class="collapse-item" href="{{route('admin.labourer.create')}}">CREATE</a>
             <a class="collapse-item" href="{{route('admin.labourer.view')}}">READ</a>
           </div>
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header"> Projects:</h6>
+            <a class="collapse-item" href="{{route('admin.project.create')}}">CREATE</a>
+            <a class="collapse-item" href="{{route('admin.project.view')}}">READ</a>
+          </div>
         </div>
       </li>
 
@@ -55,8 +60,6 @@
             <h6 class="collapse-header">Construction Utilities:</h6>
             <a class="collapse-item" href="buttons.html">CREATE</a>
             <a class="collapse-item" href="cards.html">READ</a>
-            <a class="collapse-item" href="cards.html">UPDATE</a>
-            <a class="collapse-item" href="cards.html">DELETE</a>
           </div>
         </div>
       </li>

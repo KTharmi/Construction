@@ -40,9 +40,12 @@
    Route::group(['namespace' =>'Admin', 'prefix' => 'admin/employee'],function(){
    
          Route::get('/view', 'EmployeeController@index')->name('admin.employee.view');
-         
          Route::get('/create', 'EmployeeController@create')->name('admin.employee.create');
-
+         Route::post('/', 'EmployeeController@store')->name('admin.employee.store');
+         Route::get('/{employee}/edit', 'EmployeeController@edit')->name('admin.employee.edit');
+         Route::patch('/update/{employee}', 'EmployeeController@update')->name('admin.employee.update');
+         Route::get('/delete/{employee}', 'EmployeeController@delete')->name('admin.employee.delete');
+         Route::delete('destroy/{employee}', 'EmployeeController@destroy')->name('admin.employee.destroy');
      
    });
 
@@ -58,7 +61,17 @@
   
    });
 
-
+   Route::group(['namespace' =>'Admin', 'prefix' => 'admin/project'],function(){
+   
+      Route::get('/view', 'EmployeeController@index')->name('admin.project.view');
+      Route::get('/create', 'EmployeeController@create')->name('admin.project.create');
+      Route::post('/', 'EmployeeController@store')->name('admin.project.store');
+      Route::get('/{project}/edit', 'EmployeeController@edit')->name('admin.project.edit');
+      Route::patch('/update/{project}', 'EmployeeController@update')->name('admin.project.update');
+      Route::get('/delete/{project}', 'EmployeeController@delete')->name('admin.project.delete');
+      Route::delete('destroy/{project}', 'EmployeeController@destroy')->name('admin.project.destroy');
+  
+});
 
    Route::group(['namespace' =>'Estimator', 'prefix' => 'estimator/material'],function(){
          

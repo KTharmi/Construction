@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Employee;
+use App\Http\Requests\EmployeeStoreRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +16,8 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        return view('admin/employee/index');
+        $employees = Employee::all();
+        return view('admin/employee/index', compact('employees'));
     }
 
     /**
@@ -24,18 +27,37 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        return view('admin/employee/create');
+        return view('admin.employee.create');
+    }
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+
+    public function edit(Employee $employee)
+    {
+        return view('admin.employee.update',compact('employee'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\LabourerStoreRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(EmployeeStoreRequest $request)
     {
-        //
+        $employee = new Employee();
+        $employee->setAttribute('EmpName', $request->input('EmpName'));
+        $employee->setAttribute('EmpAddress', $request->input('EmpAddress'));
+        $employee->setAttribute('EmpPhoneNo', $request->input('EmpPhoneNo'));
+        $employee->setAttribute('UserId', $request->input('UserId'));
+       // $employee->setAttribute('EmpAddress', $request->input('EmpAddress'));
+        $employee->save();
+
+        return response()->redirectToRoute('admin.employee.view');
     }
 
     /**
@@ -49,16 +71,6 @@ class EmployeeController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -67,9 +79,15 @@ class EmployeeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(EmployeeStoreRequest $request, Employee $employee)
     {
-        //
+        $employee->setAttribute('EmpName', $request->input('EmpName'));
+        $employee->setAttribute('EmpAddress', $request->input('EmpAddress'));
+        $employee->setAttribute('EmpPhoneNo', $request->input('EmpPhoneNo'));
+        $employee->setAttribute('UserId', $request->input('UserId'));
+        $employee->save();
+
+        return response()->redirectToRoute('admin.employee.view');
     }
 
     /**
@@ -78,8 +96,9 @@ class EmployeeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Employee $employee)
     {
-        //
+        $employee->delete();
+        return response()->redirectToRoute('admin.employee.view');
     }
 }
