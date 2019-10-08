@@ -21,6 +21,15 @@
     Route::get('/services', 'ServicesController@index')->name('user.services');
     Route::get('/project', 'Page\ProjectController@index')->name('user.project');
     Route::get('/elements', 'Page\ElementsController@index')->name('user.elements');
+    Route::get('/services/electrical', 'Services\ElectricalServiceController@index')->name('service.electrical');
+    Route::get('/services/buildingDrawing', 'Services\BuildingDrawingController@index')->name('service.buildingDrawing');
+    Route::get('/services/painting', 'Services\PaintingController@index')->name('service.painting');
+    Route::get('/services/plumbing', 'Services\PlumbingConstructionController@index')->name('service.plumbing');
+    Route::get('/services/roofing', 'Services\RoofingConstructionController@index')->name('service.roofing');
+    Route::get('/services/tiles', 'Services\TilesFittingController@index')->name('service.tiles');
+
+
+
  });
 
    Auth::routes();

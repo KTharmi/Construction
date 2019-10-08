@@ -27,42 +27,42 @@
         			<div class="col-lg-4">
         				<div class="services_item">
         					<img src="{{asset('user/img/architect.jpg')}}" alt="">
-							<a href="#"><h4>Building Drawings</h4></a>
+							<a href="{{route('service.buildingDrawing')}}"><h4>Building Drawings</h4></a>
         					<p>The main purpose of construction drawings is to provide a graphic representation of what is to be built. </p>
         				</div>
         			</div>
         			<div class="col-lg-4">
         				<div class="services_item">
 						<img src="{{asset('user/img/painter.jpg')}}" alt="">
-        					<a href="#"><h4>Painting Constructions</h4></a>
+        					<a href="{{route('service.painting')}}"><h4>Painting Constructions</h4></a>
         					<p>A good paint job beautifies and adds character and personality to your home. it's important to take sufficient time planning which colors, shades, and paint styles you want to decorate your home with.</p>
         				</div>
         			</div>
         			<div class="col-lg-4">
         				<div class="services_item">
 						<img src="{{asset('user/img/plumbern.jpg')}}" alt="">
-        					<a href="#"><h4>Plumbing Constructions</h4></a>
+        					<a href="{{route('service.plumbing')}}"><h4>Plumbing Constructions</h4></a>
         					<p> Plumbing uses pipes, valves, plumbing fixtures, tanks, and other apparatuses to convey fluids.</p>
         				</div>
         			</div>
 					<div class="col-lg-4">
         				<div class="services_item">
         					<img src="{{asset('user/img/electrician.jpg')}}" alt="">
-							<a href="#"><h4>Electrical Services</h4></a>
+							<a href="{{route('service.electrical')}}"><h4>Electrical Services</h4></a>
         					<p>You can get help of our electricians for installing electric switches, switchboards, fans, and appliances.</p>
         				</div>
         			</div>
         			<div class="col-lg-4">
         				<div class="services_item">
 						<img src="{{asset('user/img/roofing.jpg')}}" alt="">
-        					<a href="#"><h4>Roofing Constructions</h4></a>
+        					<a href="{{route('service.roofing')}}"><h4>Roofing Constructions</h4></a>
         					<p>A healthy roof protects your home from the elements, saves energy, helps avoid serious leaks, adds curb appeal and value and can even help keep your family healthy.</p>
         				</div>
         			</div>
         			<div class="col-lg-4">
         				<div class="services_item">
 						<img src="{{asset('user/img/tiles.jpg')}}" alt="">
-        					<a href="#"><h4>Tiles Fitting</h4></a>
+        					<a href="{{route('service.tiles')}}"><h4>Tiles Fittings</h4></a>
         					<p>These tiles have a number of qualities that make them perfect for tiling almost any part of the building. Delivering thermal, chemical, and mechanical characteristics, ceramic tiles are resistant to impact, force, stain, and water absorption.</p>
         				</div>
         			</div>
