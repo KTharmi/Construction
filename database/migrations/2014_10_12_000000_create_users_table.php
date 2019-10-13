@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('username',50)->index()->unique();
             $table->string('email',50)->unique();
+            $table->string('avatar',50)->default('default.jpg');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('is_active', ['Yes', 'No']);

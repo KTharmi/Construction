@@ -162,12 +162,13 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        NetoJose\Bootstrap4Forms\Bootstrap4FormsServiceProvider::class,
+        
 
         /*
          * Package Service Providers...
          */
-
+        NetoJose\Bootstrap4Forms\Bootstrap4FormsServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -228,6 +229,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => NetoJose\Bootstrap4Forms\Bootstrap4FormsFacade::class,
+        'Image' => Intervention\Image\Facades\Image::class,
     ],
    
 ];

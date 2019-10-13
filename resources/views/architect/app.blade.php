@@ -11,10 +11,12 @@
   <!-- Page Wrapper -->
   <div id="wrapper">
 
+   
+
     <!-- Sidebar -->
     @include('architect/side')
     <!-- End of Sidebar -->
-
+     
     <!-- Content Wrapper -->
     @section('main-contend')
  @show

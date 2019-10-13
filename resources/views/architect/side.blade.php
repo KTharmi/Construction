@@ -34,20 +34,12 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header"> Employees:</h6>
-            <a class="collapse-item" href="buttons.html">CREATE</a>
-            <a class="collapse-item" href="cards.html">READ</a>
-            <a class="collapse-item" href="cards.html">UPDATE</a>
-            <a class="collapse-item" href="cards.html">DELETE</a>
+            <h6 class="collapse-header"> Site Images:</h6>
+            <a class="collapse-item" href="buttons.html">PAST</a>
+            <a class="collapse-item" href="cards.html">PRESENT</a>
+            <a class="collapse-item" href="cards.html">FUTURE</a>
           </div>
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header"> Laborers:</h6>
-            <a class="collapse-item" href="buttons.html">CREATE</a>
-            <a class="collapse-item" href="cards.html">READ</a>
-            <a class="collapse-item" href="cards.html">UPDATE</a>
-            <a class="collapse-item" href="cards.html">DELETE</a>
           </div>
-        </div>
       </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
@@ -58,11 +50,8 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Construction Utilities:</h6>
+            <h6 class="collapse-header">Project Site Model:</h6>
             <a class="collapse-item" href="buttons.html">CREATE</a>
-            <a class="collapse-item" href="cards.html">READ</a>
-            <a class="collapse-item" href="cards.html">UPDATE</a>
-            <a class="collapse-item" href="cards.html">DELETE</a>
           </div>
         </div>
       </li>
@@ -79,7 +68,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Pages</span>
+          <span>architecture design</span>
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -87,15 +76,6 @@
             <a class="collapse-item" href="404.html">Labour bill</a>
             <a class="collapse-item" href="blank.html">Full bill</a>
             <a class="collapse-item" href="blank.html">Invoice</a>
-            <h6 class="collapse-header">Reports:</h6> 
-            <a class="collapse-item" href="404.html">Project Report</a>
-            <a class="collapse-item" href="blank.html">Anual Report</a>
-            <h6 class="collapse-header">Salaries:</h6> 
-            <a class="collapse-item" href="404.html">Employee</a>
-            <a class="collapse-item" href="blank.html">Laborers</a>
-            <h6 class="collapse-header">Schedules:</h6> 
-            <a class="collapse-item" href="404.html">Work Schedules</a>
-            <a class="collapse-item" href="blank.html">Laborers Schedules</a>
           </div>
         </div>
       </li>
