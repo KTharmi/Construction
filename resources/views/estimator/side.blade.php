@@ -61,7 +61,7 @@
             <h6 class="collapse-header">Labourer Estimating:</h6>
             <a class="collapse-item" href="{{route('estimator.estimate.labourer')}}">CREATE</a>
             <h6 class="collapse-header">Total Estimating:</h6>
-            <a class="collapse-item" href="buttons.html">CREATE</a>
+            <a class="collapse-item" href="{{route('estimator.estimate.totalcost')}}">CREATE</a>
           </div>
         </div>
       </li>

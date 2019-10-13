@@ -4,15 +4,15 @@
         <!--================Home Banner Area =================-->
         <section class="home_banner_area">
             <div class="banner_inner d-flex align-items-center">
-            	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+			<img src="{{asset('user/img/banner/banner.jpeg')}}">
+			<!-- <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background="fixed"></div>
 				<div class="container">
 					<div class="banner_content text-center">
 						<h3>Build Your Dream <span>With Us</span></h3>
 						<p>We will give live to your dream house</p>
 						<p>Dream better To live better<p>
 					</div>
-				</div>
-            </div>
+            </div> -->
         </section>
         <!--================End Home Banner Area =================-->
         

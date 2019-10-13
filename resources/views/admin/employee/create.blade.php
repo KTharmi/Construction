@@ -3,7 +3,7 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content">
-            <h3>Create Labourer</h3>
+            <h3>Create Employee</h3>
             <div class="card">
                 <div class="card-body pad">
             {!! Form::open() ->route('admin.employee.store') !!}
