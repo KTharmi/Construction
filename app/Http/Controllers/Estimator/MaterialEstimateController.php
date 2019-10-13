@@ -19,6 +19,10 @@ class MaterialEstimateController extends Controller
         return view('estimator.estimate.materialEstimate');
     }
 
+    public function selection()
+    {
+        return view('estimator.estimate.materialSelection');
+    }
     /**
      * Show the form for creating a new resource.
      *

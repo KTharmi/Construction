@@ -62,6 +62,8 @@
             <a class="collapse-item" href="{{route('estimator.estimate.labourer')}}">CREATE</a>
             <h6 class="collapse-header">Total Estimating:</h6>
             <a class="collapse-item" href="{{route('estimator.estimate.totalcost')}}">CREATE</a>
+            <h6 class="collapse-header">Total Estimating:</h6>
+            <a class="collapse-item" href="{{route('estimator.estimate.selection')}}">SELECTION</a>
           </div>
         </div>
       </li>
@@ -83,9 +85,8 @@
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Bills:</h6> 
-            <a class="collapse-item" href="404.html">Labour bill</a>
-            <a class="collapse-item" href="blank.html">Full bill</a>
-            <a class="collapse-item" href="blank.html">Invoice</a>
+            <a class="collapse-item" href="{{route('estimator.bill.labourerCost')}}">labourer cost bill</a>
+            <a class="collapse-item" href="{{route('estimator.bill.invoice')}}">Full bill</a>
           </div>
         </div>
       </li>

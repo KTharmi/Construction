@@ -109,6 +109,10 @@
          Route::get('/materials', 'MaterialEstimateController@index')->name('estimator.estimate.material');
          Route::get('/labourers', 'LabourerEstimateController@index')->name('estimator.estimate.labourer');
          Route::get('/totalcost', 'Labourer_MaterialEstimateController@index')->name('estimator.estimate.totalcost');
+         Route::get('/user/selection', 'MaterialEstimateController@selection')->name('estimator.estimate.selection');
+         
+         Route::get('/labourerCost', 'BillController@labourercost')->name('estimator.bill.labourerCost');
+         Route::get('/customer/invoice', 'BillController@invoice')->name('estimator.bill.invoice');
       });
 
    });

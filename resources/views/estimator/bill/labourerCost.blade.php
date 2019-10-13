@@ -4,7 +4,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
     <div class="box-header">
-              <h3 class="box-title">Estimate Labourer & Material Cost </h3>
+              <h3 class="box-title"> Labourer Cost </h3>
             </div>
       
     </section>
@@ -15,8 +15,14 @@
             <!-- /.box-header -->
             <label for="inputTitle">Project Title</label>
             <input type="text" class="form-control"  placeholder="Title">
-            <label for="inputTitle">Total Cost</label>
-            <input type="text" class="form-control"  placeholder="Cost">
+            <label for="inputTitle">Project Location</label>
+            <input type="text" class="form-control"  placeholder="location">
+            <label for="inputMgr">Project MGR</label>
+            <input type="text" class="form-control"  placeholder="position">
+            <label for="inputDate">Project start date</label>
+            <input type="date" class="form-control"  placeholder="start date">
+            <label for="inputDate">Project end date</label>
+            <input type="date" class="form-control"  placeholder="end date">
             <div class="box-body card">
               <table id="example1" class="table table-bordered">
                 <thead>
@@ -27,11 +33,6 @@
                   <th>Days</th>
                   <th>$/days</th>
                   <th>Labour Cost</th>
-                  <th>Material Name</th>
-                  <th>Material Type</th>
-                  <th>Unit</th>
-                  <th>$/unit</th>
-                  <th>Material Cost</th>
                   <th>Total</th>
                 </tr>
                 </thead>
@@ -41,7 +42,7 @@
                
               </table>
             </div>
-            <button class="btn"><i class="fa fa-download"></i> Download</button>
+            {!!Form::submit("Send form")!!}
             <!-- /.box-body -->
             </section>
           </div>
