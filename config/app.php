@@ -168,7 +168,7 @@ return [
          * Package Service Providers...
          */
         NetoJose\Bootstrap4Forms\Bootstrap4FormsServiceProvider::class,
-        //Intervention\Image\ImageServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
         /*
          * Application Service Providers...
          */

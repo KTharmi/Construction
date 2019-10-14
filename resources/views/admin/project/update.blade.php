@@ -5,7 +5,7 @@
     <section class="content-header">
     <div class="box-header">
               <h3 class="box-title">Update Project</h3>
-            </div> 
+    </div> 
     </section>
 
     <!-- Main content -->
@@ -19,4 +19,6 @@
             {!! Form::text('description', 'Description')->placeholder('enter the project details') !!}
             {!! Form::close() !!}
     <a href="3" class="btn btn-success col-lg-offset ">SUBMIT</a>     
+    </section>
+    </div>
 @endsection 

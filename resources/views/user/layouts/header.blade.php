@@ -20,7 +20,17 @@
 							<ul class="nav navbar-nav menu_nav ml-auto">
 								<li class="nav-item active"><a class="nav-link" href="{{route('user.home')}}">Home</a></li> 
 								<li class="nav-item"><a class="nav-link" href="{{route('user.about')}}">About</a></li> 
-								<li class="nav-item"><a class="nav-link" href="{{route('user.services')}}">Services</a>
+								<li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
+										<ul class="dropdown-menu">
+											<li class="nav-item"><a class="nav-link" href="{{route('service.buildingDrawing')}}">Building Drawings</a>
+											<li class="nav-item"><a class="nav-link" href="{{route('service.electrical')}}">Electrical </a>
+											<li class="nav-item"><a class="nav-link" href="{{route('service.painting')}}">Painting </a>
+											<li class="nav-item"><a class="nav-link" href="{{route('service.plumbing')}}">Plumbing </a>
+											<li class="nav-item"><a class="nav-link" href="{{route('service.roofing')}}">Roofing </a>
+											<li class="nav-item"><a class="nav-link" href="{{route('service.tiles')}}">Tiles Fitting</a>
+										</ul>
+								</li> 
 								<li class="nav-item submenu dropdown">
 									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
 									<ul class="dropdown-menu">
