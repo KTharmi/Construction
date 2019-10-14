@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Employee;
+use App\User;
 use App\Http\Requests\EmployeeStoreRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -27,7 +28,8 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        return view('admin.employee.create');
+        $users=User::get()->pluck('username','id')->toArray();
+        return view('admin.employee.create',compact('users'));
     }
     /**
      * Show the form for editing the specified resource.

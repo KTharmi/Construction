@@ -37,7 +37,7 @@ class EmployeeTableSeeder extends Seeder
                 'EmpName' => 'Sarangan',
                 'EmpAddress' => 'Puliyankulam',
                 'EmpPhoneNo' => 0212222134,
-                'UserId' => 5 ,
+                'UserId' => 5,
             ]
 
             ];

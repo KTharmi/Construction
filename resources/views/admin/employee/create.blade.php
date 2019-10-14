@@ -8,10 +8,9 @@
                 <div class="card-body pad">
             {!! Form::open() ->route('admin.employee.store') !!}
             {!! Form::text('EmpName', 'Name')->placeholder('enter the employee name') !!}
-            {!! Form::text('EmpId', 'Id')->placeholder('enter the employee id') !!}
             {!! Form::text('EmpAddress', 'Address')->placeholder('enter the employee address') !!}
             {!! Form::text('EmpPhoneNo', 'Phone No')->placeholder('enter the employee phone no') !!}
-            {!! Form::text('UserId', 'Roll')->placeholder('enter the user id') !!}
+            {!! Form::select( 'UserId','Choose your username', $users ?? []) !!}
             {!! Form::submit("Save") !!}
             {!! Form::close() !!}
             </div>

@@ -66,6 +66,11 @@
             <a class="collapse-item" href="buttons.html">CREATE</a>
             <a class="collapse-item" href="cards.html">READ</a>
           </div>
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header"> Users:</h6>
+            <a class="collapse-item" href="{{route('admin.user.create')}}">CREATE</a>
+            <a class="collapse-item" href="{{route('admin.user.view')}}">READ</a>
+          </div>
         </div>
       </li>
 

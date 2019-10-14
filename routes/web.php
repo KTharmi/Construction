@@ -40,6 +40,16 @@ Route::group(['middleware' => ['auth']],function(){
 
    Route::group(['middleware' =>['owner']],function(){
       Route::group(['namespace' =>'Admin', 'prefix' => 'admin'],function(){
+         Route::group([ 'prefix' => '/user'],function(){
+            Route::get('/view', 'UserController@index')->name('admin.user.view');
+            Route::get('/create', 'UserController@create')->name('admin.user.create');
+            Route::post('/', 'UserController@store')->name('admin.user.store');
+            Route::get('/{user}/edit', 'UserController@edit')->name('admin.user.edit');
+            Route::patch('/update/{user}', 'UserController@update')->name('admin.user.update');
+            Route::get('/delete/{user}', 'UserController@delete')->name('admin.user.delete');
+            Route::delete('destroy/{user}', 'UserController@destroy')->name('admin.user.destroy');
+         });
+
          Route::group([ 'prefix' => '/employee'],function(){
             Route::get('/view', 'EmployeeController@index')->name('admin.employee.view');
             Route::get('/create', 'EmployeeController@create')->name('admin.employee.create');
