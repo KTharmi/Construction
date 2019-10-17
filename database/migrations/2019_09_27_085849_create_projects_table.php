@@ -18,6 +18,8 @@ class CreateProjectsTable extends Migration
             $table->string('ProName');
             $table->string('ProAddress');
             $table->longtext('description');
+            $table->date('proStartDate');
+            $table->date('proEndDate')->nullable();
             $table->timestamps();
 
             

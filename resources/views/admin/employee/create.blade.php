@@ -7,10 +7,10 @@
             <div class="card">
                 <div class="card-body pad">
             {!! Form::open() ->route('admin.employee.store') !!}
-            {!! Form::text('EmpName', 'Name')->placeholder('enter the employee name') !!}
-            {!! Form::text('EmpAddress', 'Address')->placeholder('enter the employee address') !!}
-            {!! Form::text('EmpPhoneNo', 'Phone No')->placeholder('enter the employee phone no') !!}
-            {!! Form::select( 'UserId','Choose your username', $users ?? []) !!}
+            {!! Form::text('EmpName', 'Name')->placeholder('enter the employee name')->required() !!}
+            {!! Form::text('EmpAddress', 'Address')->placeholder('enter the employee address')->required() !!}
+            {!! Form::text('EmpPhoneNo', 'Phone No')->placeholder('enter the employee phone no') ->required()!!}
+            {!! Form::select( 'UserId','Choose your username', $users ?? [])->required() !!}
             {!! Form::submit("Save") !!}
             {!! Form::close() !!}
             </div>

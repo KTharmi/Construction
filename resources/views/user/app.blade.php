@@ -10,15 +10,15 @@
         @include('user/layouts/header')
         </header>
         <!--================Header Menu Area =================-->
- <!-- Main Content -->
- <div class="content-wrapper">
- @section('main-contend')
- @show
-</div>
+        <!-- Main Content -->
+        <div class="content-wrapper">
+        @section('main-contend')
+        @show
+        </div>
     <!--================ start footer Area  =================-->	
         
 
-  <!-- Footer -->
-  @include('user/layouts/footer')
+      <!-- Footer -->
+      @include('user/layouts/footer')
     </body>
 </html>

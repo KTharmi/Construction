@@ -32,6 +32,11 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header"> Users:</h6>
+            <a class="collapse-item" href="{{route('admin.user.create')}}">CREATE</a>
+            <a class="collapse-item" href="{{route('admin.user.view')}}">READ</a>
+          </div>
+          <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header"> Employees:</h6>
             <a class="collapse-item" href="{{route('admin.employee.create')}}">CREATE</a>
             <a class="collapse-item" href="{{route('admin.employee.view')}}">READ</a>
@@ -45,11 +50,6 @@
             <h6 class="collapse-header"> Projects:</h6>
             <a class="collapse-item" href="{{route('admin.project.create')}}">CREATE</a>
             <a class="collapse-item" href="{{route('admin.project.view')}}">READ</a>
-          </div>
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header"> Material:</h6>
-            <a class="collapse-item" href="{{route('admin.material.create')}}">CREATE</a>
-            <a class="collapse-item" href="{{route('admin.material.view')}}">READ</a>
           </div>
         </div>
       </li>
@@ -67,9 +67,9 @@
             <a class="collapse-item" href="cards.html">READ</a>
           </div>
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header"> Users:</h6>
-            <a class="collapse-item" href="{{route('admin.user.create')}}">CREATE</a>
-            <a class="collapse-item" href="{{route('admin.user.view')}}">READ</a>
+            <h6 class="collapse-header"> Material:</h6>
+            <a class="collapse-item" href="{{route('admin.material.create')}}">CREATE</a>
+            <a class="collapse-item" href="{{route('admin.material.view')}}">READ</a>
           </div>
         </div>
       </li>

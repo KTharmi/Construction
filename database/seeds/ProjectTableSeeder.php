@@ -17,6 +17,7 @@ class ProjectTableSeeder extends Seeder
              'ProName' => 'Villa',
              'ProAddress' => 'Vanni',
              'description' => '5square area',
+             'proStartDate'=>'2019-10-01',
             ]
 
             ];

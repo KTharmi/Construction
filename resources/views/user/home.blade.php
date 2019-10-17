@@ -73,36 +73,35 @@
         <!--================End Services Area =================-->
         
         <!--================Builder Image Area =================-->
-        <seciton class="builder_area">
+        <section class="builder_area">
         	<div class="main_title">
         		<h3>Our Latest Projects</h3>
-        		
-        	</div>
-			<div class="row m0 builder_inner">
-				<div class="builder_item">
-				<img src="{{asset('user/img/1.jpg')}}" alt="">
-					<div class="hover">
-						<h4>House Project 1</h4>
-						<p>Sangaththanai, Chavakachcheri</p>
+        	
+				<div class="row m0 builder_inner">
+					<div class="builder_item">
+					<img src="{{asset('user/img/1.jpg')}}" alt="">
+						<div class="hover">
+							<h4>House Project 1</h4>
+							<p>Sangaththanai, Chavakachcheri</p>
+						</div>
 					</div>
-				</div>
-				<div class="builder_item">
-				<img src="{{asset('user/img/6.jpg')}}" alt="">
-					<div class="hover">
-						<h4>House Project 2</h4>
-						<p>Kaithady , Jaffna</p>
+					<div class="builder_item">
+					<img src="{{asset('user/img/6.jpg')}}" alt="">
+						<div class="hover">
+							<h4>House Project 2</h4>
+							<p>Kaithady , Jaffna</p>
+						</div>
 					</div>
-				</div>
-				<div class="builder_item">
-				<img src="{{asset('user/img/5.jpg')}}" alt="">
-					<div class="hover">
-						<h4>House Project 3</h4>
-						<p>Avarangal, Pointpedro</p>
+					<div class="builder_item">
+					<img src="{{asset('user/img/5.jpg')}}" alt="">
+						<div class="hover">
+							<h4>House Project 3</h4>
+							<p>Avarangal, Pointpedro</p>
+						</div>
 					</div>
-				</div>
-				
+				</div>	
 			</div>
-        </seciton>
+        </section>
         <!--================End Builder Image Area =================-->
         
         <!--================Team Area =================-->
@@ -119,8 +118,6 @@
         						<img class="img-fluid" src="{{asset('user/img/team/team-2.jpg')}}" alt="">
         						<div class="hover">
         							<a href="#"><i class="fa fa-facebook"></i></a>
-        							
-        							
         						</div>
         					</div>
         					<div class="team_name">
@@ -135,8 +132,6 @@
         						<img class="img-fluid" src="{{asset('user/img/team/team-4.jpg')}}" alt="">
         						<div class="hover">
         							<a href="#"><i class="fa fa-facebook"></i></a>
-        							
-        							
         						</div>
         					</div>
         					<div class="team_name">
@@ -151,8 +146,6 @@
         						<img class="img-fluid" src="{{asset('user/img/team/team-1.jpg')}}" alt="">
         						<div class="hover">
         							<a href="#"><i class="fa fa-facebook"></i></a>
-        							
-        							
         						</div>
         					</div>
         					<div class="team_name">
@@ -167,8 +160,6 @@
         						<img class="img-fluid" src="{{asset('user/img/team/team-3.jpg')}}" alt="">
         						<div class="hover">
         							<a href="#"><i class="fa fa-facebook"></i></a>
-        							
-        							
         						</div>
         					</div>
         					<div class="team_name">

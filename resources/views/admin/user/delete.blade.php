@@ -4,7 +4,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
     <div class="box-header">
-              <h3 class="box-title">Delete A Employee</h3>
+              <h3 class="box-title">Delete A User</h3>
             </div>
       
     </section>
@@ -21,7 +21,7 @@
                         {!!Form::open()->method('delete')->route('admin.user.destroy', ['users' => $user->id])!!}
                         {!!Form::hidden('id')->value($user->id)!!}
                         {!!Form::submit('Delete')->danger()!!}
-                        {!!Form::anchor("Cancel")->route('admin.user.index')!!}
+                        {!!Form::anchor("Cancel")->route('admin.user.view')!!}
                         {!!Form::close()!!}
                 </div>
             </div>

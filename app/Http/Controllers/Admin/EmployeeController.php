@@ -18,7 +18,8 @@ class EmployeeController extends Controller
     public function index()
     {
         $employees = Employee::all();
-        return view('admin/employee/index', compact('employees'));
+        $users=User::get()->pluck('username','id')->toArray();
+        return view('admin/employee/index', compact('employees','users'));
     }
 
     /**

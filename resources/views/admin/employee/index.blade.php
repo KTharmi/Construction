@@ -22,7 +22,7 @@
                   <th>Employee Name</th>
                   <th>Employee Address</th>
                   <th>Employee phoneNo</th>
-                  <th>UserId </th>
+                  <th>UserName </th>
                   <th>Edit</th>
                   <th>Delete</th>
                 </tr>
@@ -34,7 +34,7 @@
                   <td>{{ $employee->EmpName }}</td>
                   <td>{{ $employee->EmpAddress }}</td>
                   <td>{{ $employee->EmpPhoneNo }}</td>
-                  <td>{{ $employee->UserId }}</td>
+                  <td>{{ $employee-> userId }}</td>
                   <td><a href="{{route('admin.employee.edit', $employee->EmpId)}}"><span class="btn btn-primary btn-circle btn-sm"><i class="fas fa-edit"></i></td>
                   <td><a href ="{{route('admin.employee.delete', $employee->EmpId)}}"><span class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></span></a></td>
                   </tr>

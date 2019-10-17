@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\User;
+use App\Role;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -44,7 +45,7 @@ class UserController extends Controller
         $user->setAttribute('password',  Hash::make($request->input('password')));
         $user->save();
 
-        return response()->redirectToRoute('admin.user.index');
+        return response()->redirectToRoute('admin.user.view');
     }
 
     /**
@@ -66,7 +67,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('admin.user.update', compact('user'));
+        $roles=Role::get()->pluck('role_name','id')->toArray();
+        return view('admin.user.update', compact('user','roles'));
     }
 
     /**
@@ -85,7 +87,7 @@ class UserController extends Controller
         }
         $user->save();
 
-        return response()->redirectToRoute('admin.user.index');
+        return response()->redirectToRoute('admin.user.view');
     }
 
     /**
@@ -101,6 +103,6 @@ class UserController extends Controller
 
     public function destroy(User $user, Request $request){
         $user->delete();
-        return response()->redirectToRoute('admin.user.index');
+        return response()->redirectToRoute('admin.user.view');
     }
 }
