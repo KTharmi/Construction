@@ -23,10 +23,10 @@
                         {!!Form::submit('Delete')->danger()!!}
                         {!!Form::anchor("Cancel")->route('admin.labourer.view')!!}
                         {!!Form::close()!!}
-                </div>
+                        </div>
             </div>
         </div>
     </div>
     </section>
     </div>
-    @endsection 
+    @endsection

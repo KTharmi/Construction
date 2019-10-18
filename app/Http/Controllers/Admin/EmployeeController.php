@@ -41,7 +41,8 @@ class EmployeeController extends Controller
 
     public function edit(Employee $employee)
     {
-        return view('admin.employee.update',compact('employee'));
+        //$users=User::get()->pluck('username','id')->toArray();
+        return view('admin.employee.update',compact('employee','users'));
     }
 
     /**
@@ -99,6 +100,10 @@ class EmployeeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function delete(Employee $employee)
+    {
+        return view('admin.employee.delete', compact('employee'));
+    }
     public function destroy(Employee $employee)
     {
         $employee->delete();

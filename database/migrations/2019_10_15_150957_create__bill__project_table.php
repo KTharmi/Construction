@@ -25,7 +25,7 @@ class CreateBillProjectTable extends Migration
             $table->timestamps();
 
             $table->foreign('ProId')
-            ->references('ProId')->on('Projects')
+            ->references('id')->on('Projects')
             ->onDelete('cascade');
 
             

@@ -9,7 +9,7 @@
             {!! Form::open() ->route('admin.project.store') !!}
             {!! Form::text('ProName', 'Name')->placeholder('enter the project name') !!}
             {!! Form::text('ProAddress', 'Address')->placeholder('enter the project location') !!}
-            {!! Form::text('description', 'Description')->placeholder('enter the project details') !!}
+            {!! Form::textarea('description', 'Description')->placeholder('enter the project details') !!}
             {!! Form::submit("Save") !!}
             {!! Form::close() !!}
             </div>

@@ -16,9 +16,9 @@
             {!! Form::open()->route('admin.project.update' , ['project' => $project->id])->patch()->fill($project) !!}
             {!! Form::text('ProName', 'Name')->placeholder('enter the project name') !!}
             {!! Form::text('ProAddress', 'Address')->placeholder('enter the project location') !!}
-            {!! Form::text('description', 'Description')->placeholder('enter the project details') !!}
-            {!! Form::close() !!}
-    <a href="3" class="btn btn-success col-lg-offset ">SUBMIT</a>     
+            {!! Form::textarea('description', 'Description')->placeholder('enter the project details') !!}
+            {!! Form::submit("Update") !!}
+            {!! Form::close() !!}   
     </section>
     </div>
 @endsection 

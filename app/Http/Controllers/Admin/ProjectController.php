@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-use App\Projects;
+use App\Project;
 use App\Http\Requests\ProjectStoreRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -15,7 +15,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $project = Project::all();
+        $projects = Project::all();
         return view('admin/project/index', compact('projects'));
     }
 
@@ -65,9 +65,9 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Project $Project)
+    public function edit(Project $project)
     {
-        return view('estimator.project.update',compact('project'));
+        return view('admin.project.update',compact('project'));
     }
 
     /**
@@ -79,7 +79,6 @@ class ProjectController extends Controller
      */
     public function update(ProjectStoreRequest $request, Project $Project)
     {
-        $project->setAttribute('ProId', $request->input('ProId'));
         $project->setAttribute('ProName', $request->input('ProName'));
         $project->setAttribute('ProAddress', $request->input('ProAddress'));
         $project->setAttribute('describtion', $request->input('describtion'));

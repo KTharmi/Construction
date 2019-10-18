@@ -9,7 +9,6 @@
                     {!! Form::open() ->route('estimator.material.store') !!}
                     {!! Form::text('MatName', 'Material Name')->placeholder('enter the material name') !!}
                     {!! Form::text('MatType', 'Material Type')->placeholder('enter the material type') !!}
-                    {!! Form::text('UnitPrice', 'UnitPrice')->placeholder('enter the material unitprice') !!}
                     {!! Form::submit("Save") !!}
                     {!! Form::close() !!}
                 </div>

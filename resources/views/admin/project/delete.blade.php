@@ -18,14 +18,15 @@
                 <div class="card-body pad">
                 <div class="panel-heading">Are you sure?</div>
                         <div class="panel-body">{{ $project->ProName }}</div>
-                        {!!Form::open()->method('delete')->route('admin.project.destroy', ['project' => $project->ProId])!!}
-                        {!!Form::hidden('ProId')->value($project->ProId)!!}
+                        {!!Form::open()->method('delete')->route('admin.project.destroy', ['project' => $project->id])!!}
+                        {!!Form::hidden('id')->value($project->id)!!}
                         {!!Form::submit('Delete')->danger()!!}
                         {!!Form::anchor("Cancel")->route('admin.project.view')!!}
                         {!!Form::close()!!}
-                </div>
+                        </div>
             </div>
         </div>
     </div>
     </section>
     </div>
+    @endsection

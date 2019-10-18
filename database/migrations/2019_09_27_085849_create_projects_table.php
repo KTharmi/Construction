@@ -14,7 +14,7 @@ class CreateProjectsTable extends Migration
     public function up()
     {
         Schema::create('projects', function (Blueprint $table) {
-            $table->bigIncrements('ProId');
+            $table->bigIncrements('id');
             $table->string('ProName');
             $table->string('ProAddress');
             $table->longtext('description');

@@ -4,14 +4,13 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
     <div class="box-header">
-              <h3 class="box-title">Edit user</h3>
+              <h3 class="box-title">Update User</h3>
             </div> 
     </section>
-
-    <!-- Main content -->
+                <!-- Main content -->
     <section class="content">
               
-            <!-- /.box-header -->
+              <!-- /.box-header -->
    
             {!! Form::open()->route('admin.user.update', ['user' => $user->id])->patch()->fill($user) !!}
             {!! Form::text('username', 'UserName') ->required()!!}
@@ -20,6 +19,6 @@
             {!!Form::select('role','Select your Role', $roles ?? [])->required() !!}
             {!! Form::submit("Update") !!}
             {!! Form::close() !!}     
-    </section>
+            </section>
 </div>
 @endsection 

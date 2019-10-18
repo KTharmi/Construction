@@ -7,9 +7,9 @@
             <div class="card">
                 <div class="card-body pad">
                     {!! Form::open() ->route('admin.labourer.store') !!}
-                    {!! Form::text('LabName', 'Labourer Name')->placeholder('enter the labourer name') !!}
-                    {!! Form::text('LabType', 'Labourer Type')->placeholder('enter the labourer type') !!}
-                    {!! Form::text('LabPhoneNo', 'Labourer PhoneNo')->placeholder('enter the labourer phoneNo') !!}
+                    {!! Form::text('LabName', 'Labourer Name')->placeholder('enter the labourer name')->required() !!}
+                    {!!Form::select('LabType', 'Choose your labouer type', [''=>'--choose your role---', 1=>'carbentant', 2=>'meson'])!!}
+                    {!! Form::tel('LabPhoneNo', 'Labourer PhoneNo')->placeholder('enter the labourer phoneNo') ->required()!!}
                     {!! Form::submit("Save") !!}
                     {!! Form::close() !!}
                 </div>

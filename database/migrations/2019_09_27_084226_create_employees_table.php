@@ -14,7 +14,7 @@ class CreateEmployeesTable extends Migration
     public function up()
     {
         Schema::create('employees', function (Blueprint $table) {
-            $table->bigIncrements('EmpId');
+            $table->bigIncrements('id');
             $table->string('EmpName',50);
             $table->string('EmpAddress',50);
             $table->unsignedBigInteger('EmpPhoneNo');

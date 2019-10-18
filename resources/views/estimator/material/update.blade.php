@@ -9,7 +9,6 @@
                     {!! Form::open() ->route('estimator.material.update' , ['material' => $material->id])->patch()->fill($material) !!}
                     {!! Form::text('MatName', 'Material Name') !!}
                     {!! Form::text('MatType', 'Material Type') !!}
-                    {!! Form::text('UnitPrice', 'UnitPrice') !!}
                     {!! Form::submit("Update") !!}
                     {!! Form::close() !!}
                 </div>

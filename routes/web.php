@@ -92,6 +92,17 @@ Route::group(['middleware' => ['auth']],function(){
 
          });
 
+         Route::group(['prefix' => '/task'],function(){   
+            Route::get('/view', 'TaskController@index')->name('admin.task.view');
+            Route::get('/create', 'TaskController@create')->name('admin.task.create');
+            Route::post('/', 'TaskController@store')->name('admin.task.store');
+            Route::get('/{work}/edit', 'TaskController@edit')->name('admin.task.edit');
+            Route::patch('/update/{work}', 'TaskController@update')->name('admin.task.update');
+            Route::get('/delete/{work}', 'TaskController@delete')->name('admin.task.delete');
+            Route::delete('destroy/{work}', 'TaskController@destroy')->name('admin.task.destroy');
+
+         });
+
       });
 
    });

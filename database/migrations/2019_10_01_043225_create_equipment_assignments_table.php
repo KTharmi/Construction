@@ -26,7 +26,7 @@ class CreateEquipmentAssignmentsTable extends Migration
             ->onDelete('cascade');
 
             $table->foreign('ProId')
-            ->references('ProId')->on('Projects')
+            ->references('id')->on('Projects')
             ->onDelete('cascade');
         });
     }

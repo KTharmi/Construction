@@ -62,14 +62,14 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Construction Utilities:</h6>
-            <a class="collapse-item" href="buttons.html">CREATE</a>
-            <a class="collapse-item" href="cards.html">READ</a>
-          </div>
-          <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header"> Material:</h6>
             <a class="collapse-item" href="{{route('admin.material.create')}}">CREATE</a>
             <a class="collapse-item" href="{{route('admin.material.view')}}">READ</a>
+          </div>
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header"> Tasks:</h6>
+            <a class="collapse-item" href="{{route('admin.task.create')}}">CREATE</a>
+            <a class="collapse-item" href="{{route('admin.task.view')}}">READ</a>
           </div>
         </div>
       </li>

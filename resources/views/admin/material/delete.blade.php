@@ -23,9 +23,10 @@
                         {!!Form::submit('Delete')->danger()!!}
                         {!!Form::anchor("Cancel")->route('admin.material.view')!!}
                         {!!Form::close()!!}
-                </div>
+                        </div>
             </div>
         </div>
     </div>
     </section>
     </div>
+    @endsection
