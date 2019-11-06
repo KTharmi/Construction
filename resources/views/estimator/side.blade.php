@@ -45,6 +45,11 @@
             <a class="collapse-item" href="{{route('estimator.task.create')}}">CREATE</a>
             <a class="collapse-item" href="{{route('estimator.task.view')}}">READ</a>
           </div>
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header"> Equipments:</h6>
+            <a class="collapse-item" href="{{route('estimator.equipment.create')}}">CREATE</a>
+            <a class="collapse-item" href="{{route('estimator.equipment.view')}}">READ</a>
+          </div>
         </div>
       </li>
 
@@ -84,11 +89,18 @@
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Project Details:</h6> 
+            <a class="collapse-item" href="{{route('estimator.project.view')}}">Project List</a>
+          </div>
+        </div>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Bills:</h6> 
             <a class="collapse-item" href="{{route('estimator.bill.labourerCost')}}">labourer cost bill</a>
             <a class="collapse-item" href="{{route('estimator.bill.invoice')}}">Full bill</a>
           </div>
         </div>
+        
       </li>
 
       

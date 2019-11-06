@@ -14,9 +14,9 @@ class CreateEquipmentsTable extends Migration
     public function up()
     {
         Schema::create('equipments', function (Blueprint $table) {
-            $table->bigIncrements('EquipId');
+            $table->bigIncrements('id');
             $table->string('EquipName',50);
-            $table->double('Rent',8,2);
+            $table->double('Rent',8,2)->nullable();
             $table->timestamps();
         });
     }

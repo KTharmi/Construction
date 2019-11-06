@@ -3,12 +3,11 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content">
-            <h3>Edit Task details</h3>
+            <h3>Edit Equipment</h3>
             <div class="card">
                 <div class="card-body pad">
-                    {!! Form::open() ->route('estimator.task.update' , ['work' => $work->id])->patch()->fill($work) !!}
-                    {!! Form::text('task', 'Task Name') !!}
-                    {!! Form::textarea('description', 'Task Description') !!}
+                    {!! Form::open() ->route('estimator.equipment.update' , ['equipment' => $equipment->id])->patch()->fill($equipment) !!}
+                    {!! Form::text('EquipName', 'Equipment Name') !!}
                     {!! Form::submit("Update") !!}
                     {!! Form::close() !!}
                 </div>

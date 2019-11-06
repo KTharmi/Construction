@@ -17,7 +17,7 @@ class CreateWorksTable extends Migration
             $table->bigIncrements('id');
             $table->string('task');
             $table->longtext('description');
-            $table->double('rate',8,2);
+            $table->double('rate',8,2)->nullable();
             $table->timestamps();
         });
     }

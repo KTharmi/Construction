@@ -17,7 +17,7 @@ class CreateMaterialsTable extends Migration
             $table->bigIncrements('id');
             $table->string('MatName',50);
             $table->string('MatType',50);
-            $table->double('UnitPrice',8,2);
+            $table->double('UnitPrice',8,2)->nullable();
             $table->timestamps();
         });
     }

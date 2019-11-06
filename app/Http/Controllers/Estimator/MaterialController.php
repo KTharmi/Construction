@@ -80,7 +80,6 @@ class MaterialController extends Controller
     {
          $material->setAttribute('MatName', $request->input('MatName'));
          $material->setAttribute('MatType', $request->input('MatType'));
-         $material->setAttribute('UnitPrice', $request->input('UnitPrice'));
          $material->save();
 
          return response()->redirectToRoute('estimator.material.view');

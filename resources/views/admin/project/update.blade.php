@@ -12,13 +12,13 @@
     <section class="content">
               
             <!-- /.box-header -->
-   
-            {!! Form::open()->route('admin.project.update' , ['project' => $project->id])->patch()->fill($project) !!}
+         {!! Form::open()->route('admin.project.update' , ['project' => $project->id])->patch()->fill($project) !!}
             {!! Form::text('ProName', 'Name')->placeholder('enter the project name') !!}
             {!! Form::text('ProAddress', 'Address')->placeholder('enter the project location') !!}
             {!! Form::textarea('description', 'Description')->placeholder('enter the project details') !!}
             {!! Form::submit("Update") !!}
-            {!! Form::close() !!}   
+            {!! Form::close() !!}  
+       
     </section>
     </div>
 @endsection 

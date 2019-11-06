@@ -142,6 +142,26 @@ Route::group(['middleware' => ['auth']],function(){
       
          });
 
+         Route::group(['prefix' => '/equipment'],function(){
+            Route::get('/view', 'EquipmentController@index')->name('estimator.equipment.view');
+            Route::get('/create', 'EquipmentController@create')->name('estimator.equipment.create');
+            Route::post('/', 'EquipmentController@store')->name('estimator.equipment.store');
+            Route::get('/{equipment}/edit', 'EquipmentController@edit')->name('estimator.equipment.edit');
+            Route::patch('/update/{equipment}', 'EquipmentController@update')->name('estimator.equipment.update');
+            Route::get('/delete/{equipment}', 'EquipmentController@delete')->name('estimator.equipment.delete');
+            Route::delete('destroy/{equipment}', 'EquipmentController@destroy')->name('estimator.equipment.destroy');
+      
+         });
+
+         Route::group(['prefix' => '/project'],function(){
+            Route::get('/view', 'ProjectController@index')->name('estimator.project.view');
+            Route::get('/{project}/show', 'ProjectController@show')->name('estimator.project.show');
+            Route::get('/{project}/materialChoose', 'ProjectController@materialChoose')->name('estimator.project.materialChoose');
+            Route::get('/{project}/edit', 'ProjectController@edit')->name('estimator.project.edit');
+            Route::patch('/update/{project}', 'ProjectController@update')->name('estimator.project.update');
+      
+         });
+
          Route::group(['prefix' => '/estimate'],function(){
             Route::get('/materials', 'MaterialEstimateController@index')->name('estimator.estimate.material');
             Route::get('/labourers', 'LabourerEstimateController@index')->name('estimator.estimate.labourer');

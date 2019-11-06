@@ -22,7 +22,7 @@ class CreateEquipmentAssignmentsTable extends Migration
             $table->timestamps();
 
             $table->foreign('EquipId')
-            ->references('EquipId')->on('equipments')
+            ->references('id')->on('equipments')
             ->onDelete('cascade');
 
             $table->foreign('ProId')

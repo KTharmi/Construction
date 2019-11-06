@@ -23,9 +23,10 @@
                         {!!Form::submit('Delete')->danger()!!}
                         {!!Form::anchor("Cancel")->route('estimator.labourer.view')!!}
                         {!!Form::close()!!}
-                </div>
+                        </div>
             </div>
         </div>
     </div>
     </section>
     </div>
+    @endsection
