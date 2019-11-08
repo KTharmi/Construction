@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 use App\Project;
-use App\Http\Requests\ProjectStoreRequest;
+use App\Http\Request\ProjectStoreRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
