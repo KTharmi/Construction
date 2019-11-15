@@ -31,14 +31,8 @@
 								<li class="nav-item"><a class="nav-link" href="{{route('service.tiles')}}">Tiles Fitting</a>
 							</ul>
 					</li> 
-					<li class="nav-item submenu dropdown">
-						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
-						<ul class="dropdown-menu">
-							<li class="nav-item"><a class="nav-link" href="{{route('user.project')}}">Projects - Finished</a>
-							<li class="nav-item"><a class="nav-link" href="{{route('user.elements')}}">Projects - On going</a></li>
-						</ul>
-					</li> 
-
+					
+					<li class="nav-item"><a class="nav-link" href="{{route('user.project')}}">Projects </a></li>
 					<li class="nav-item"><a class="nav-link" href="{{route('user.contact')}}">Contact</a></li>
 				</ul>
 				

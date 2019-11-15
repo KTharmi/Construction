@@ -1,9 +1,6 @@
 <footer class="footer-area">
             <div class="container">
-                    <div class="col-lg-4 col-md-4 footer-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        
-                    </div>
+                    <p align="center"> Dream It - Build It </p>
             </div>
 </footer>
 		<!--================ End footer Area  =================-->
