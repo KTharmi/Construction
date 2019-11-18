@@ -118,6 +118,14 @@ Route::group(['middleware' => ['auth']],function(){
 
    });
 
+   Route::group(['middleware' =>['engineer']],function(){
+      Route::group(['namespace' =>'Engineer', 'prefix' => 'engineer'],function(){
+         Route::get('/view', 'ProjectController@index')->name('engineer.project.view');
+      });
+
+   });
+
+
    Route::group(['middleware' =>['estimator']],function(){
       Route::group(['namespace' =>'Estimator', 'prefix' => 'estimator'],function(){
          Route::group(['prefix' => '/material'],function(){   
@@ -190,6 +198,13 @@ Route::group(['middleware' => ['auth']],function(){
             Route::get('/customer/invoice', 'BillController@invoice')->name('estimator.bill.invoice');
          });
    
+      });
+
+   });
+
+   Route::group(['middleware' =>['CManager']],function(){
+      Route::group(['namespace' =>'CManager', 'prefix' => 'CManager'],function(){
+         Route::get('/view', 'ProjectController@index')->name('CManager.project.view');
       });
 
    });
