@@ -14,7 +14,7 @@ class LaborerController extends Controller
      */
     public function index()
     {
-        //
+        return('CManager/labourerSch');
     }
 
     /**

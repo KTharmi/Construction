@@ -15,7 +15,7 @@
       <li class="nav-item active">
         <a class="nav-link" href="{{route('home')}}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard Construction-Manager</span></a>
+          <span>Construction-Manager</span></a>
       </li>
 
       <!-- Divider -->
@@ -23,7 +23,7 @@
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Laborers -CRUD
+        Labourers -CRUD
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
@@ -34,7 +34,7 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header"> Laborers:</h6>
+            <h6 class="collapse-header"> Labourers:</h6>
             <a class="collapse-item" href="buttons.html">CREATE</a>
             <a class="collapse-item" href="cards.html">READ</a>
             <a class="collapse-item" href="cards.html">UPDATE</a>
@@ -78,7 +78,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Schedules:</h6> 
             <a class="collapse-item" href="404.html">Work Schedules</a>
-            <a class="collapse-item" href="blank.html">Laborers Schedules</a>
+            <a class="collapse-item" href="{{route('CManager.labourerSch.view')}}">Laborers Schedules</a>
           </div>
         </div>
       </li>

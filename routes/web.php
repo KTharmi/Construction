@@ -27,6 +27,7 @@
       Route::get('/plumbing', 'ServiceController@plumbingServices')->name('service.plumbing');
       Route::get('/roofing', 'ServiceController@roofingServices')->name('service.roofing');
       Route::get('/tiles', 'ServiceController@tilesFittingsServices')->name('service.tiles');
+      
    });
 
  });
@@ -193,5 +194,13 @@ Route::group(['middleware' => ['auth']],function(){
       });
 
    });
+   
+   Route::group(['middleware' =>['CManager']],function(){
+      Route::group(['namespace' =>'Manager', 'prefix' => 'Manager'],function(){  
+            Route::get('/view', 'LaborerController@index')->name('CManager.labourerSch.view');
+
+      });
+
+   });      
    
 });
