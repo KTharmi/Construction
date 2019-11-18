@@ -23,7 +23,7 @@
                 @foreach($materials as $material)
                   <tr>
                   <td>{{ $loop->index +1 }}</td>
-                  <td> <input type="checkbox" name="yes[]" value="YES"> SELECTED<br></td>
+                  <td> <input type="checkbox" name="yes[]" value="YES"> SELECT<br></td>
                   <td>{{ $material->MatName }}</td>
                   <td>{{ $material->MatType }}<input type="hidden" name="id[]" value="{{ $material->id }}"></td>
                   <td>{{ $material->UnitPrice }}</td>

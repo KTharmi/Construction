@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Manager;
+namespace App\Http\Controllers\Engineer;
 
 use App\Project;
-use App\Labourer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class LaborerController extends Controller
+class ProjectController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +16,7 @@ class LaborerController extends Controller
     public function index()
     {
         $projects = Project::get()->pluck('ProName','id')->toArray();
-        $labourers = Labourer::all();
-        return view('CManager/labourerSch',compact('labourers','projects'));
+        return view('engineer/note',compact('projects'));
     }
 
     /**

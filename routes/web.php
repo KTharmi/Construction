@@ -119,6 +119,14 @@ Route::group(['middleware' => ['auth']],function(){
 
    });
 
+   Route::group(['middleware' =>['engineer']],function(){
+      Route::group(['namespace' =>'Engineer', 'prefix' => 'engineer'],function(){
+         Route::get('/view', 'ProjectController@index')->name('engineer.project.view');
+      });
+
+   });
+
+
    Route::group(['middleware' =>['estimator']],function(){
       Route::group(['namespace' =>'Estimator', 'prefix' => 'estimator'],function(){
          Route::group(['prefix' => '/material'],function(){   
@@ -194,10 +202,18 @@ Route::group(['middleware' => ['auth']],function(){
       });
 
    });
+
+   Route::group(['middleware' =>['CManager']],function(){
+      Route::group(['namespace' =>'CManager', 'prefix' => 'CManager'],function(){
+         Route::get('/view', 'ProjectController@index')->name('CManager.project.view');
+      });
+
+   });
    
    Route::group(['middleware' =>['CManager']],function(){
       Route::group(['namespace' =>'Manager', 'prefix' => 'Manager'],function(){  
             Route::get('/view', 'LaborerController@index')->name('CManager.labourerSch.view');
+            Route::get('/store', 'LaborerController@store')->name('CManager.labourerSch.store');
 
       });
 
