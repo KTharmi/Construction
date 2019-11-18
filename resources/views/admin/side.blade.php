@@ -97,7 +97,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Bills:</h6> 
             <a class="collapse-item" href="404.html">Labour bill</a>
-            <a class="collapse-item" href="blank.html">Full bill</a>
+            <a class="collapse-item" href="{{route('admin.bill.view')}}">Full bill</a>
             <a class="collapse-item" href="blank.html">Invoice</a>
             <h6 class="collapse-header">Reports:</h6> 
             <a class="collapse-item" href="404.html">Project Report</a>

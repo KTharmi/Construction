@@ -114,6 +114,11 @@ Route::group(['middleware' => ['auth']],function(){
 
          });
 
+         Route::group(['prefix' => '/bill'],function(){   
+            Route::get('/view', 'BillController@index')->name('admin.bill.view');
+
+         });
+
       });
 
    });
@@ -204,7 +209,7 @@ Route::group(['middleware' => ['auth']],function(){
 
    Route::group(['middleware' =>['CManager']],function(){
       Route::group(['namespace' =>'CManager', 'prefix' => 'CManager'],function(){
-         Route::get('/view', 'ProjectController@index')->name('CManager.project.view');
+        // Route::get('/view', 'ProjectController@index')->name('CManager.project.view');
       });
 
    });
