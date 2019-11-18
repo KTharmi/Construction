@@ -18,7 +18,15 @@ class ProjectTableSeeder extends Seeder
              'ProAddress' => 'Vanni',
              'description' => '5square area',
              'proStartDate'=>'2019-10-01',
-            ]
+             'CustId' => '1',
+            ],
+            [
+                'ProName' => 'akil',
+                'ProAddress' => 'Vsdni',
+                'description' => '5square aredsfa',
+                'proStartDate'=>'2019-10-01',
+                'CustId' => '2',
+               ]
 
             ];
             foreach($projects as $project){

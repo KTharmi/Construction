@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Estimator;
 
+use App\Project;
 use App\Labourer;
 use App\Material;
+use App\Work;
 use App\Http\Requests\LabourerStoreRequest;
 use App\Http\Requests\MaterialStoreRequest;
 use Illuminate\Http\Request;
@@ -18,7 +20,10 @@ class Labourer_MaterialEstimateController extends Controller
      */
     public function index()
     {
-        return view('estimator.estimate.totalEstimate');
+        $projects = Project::get()->pluck('ProName','id')->toArray();
+        $works = Work::all();
+        $materials = Material::all();
+        return view('estimator.estimate.totalEstimate',compact('materials','projects','works'));
     }
 
     /**

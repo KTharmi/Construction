@@ -13,8 +13,8 @@
     <section class="content">
     @include('includes\messages')
             <!-- /.box-header -->
-            <label for="inputTitle">Project Title</label>
-            <input type="text" class="form-control"  placeholder="Title">
+            {!! Form::open()!!}
+            {!! Form::select( 'project_name','Choose your project', $projects ?? [])  !!}
             <label for="inputTitle">Total Material Cost</label>
             <input type="text" class="form-control"  placeholder="Cost">
             <div class="box-body card">
@@ -30,12 +30,16 @@
                 </tr>
                 </thead>
                 <tbody>
-               
+                
                 </tbody>
                
               </table>
+              {!!Form::reset("Clear form")!!}
+              {!!Form::submit("save")!!}
+              {!! Form::close() !!}
             </div>
             <!-- /.box-body -->
+            <button class="btn"><i class="fa fa-download"></i> Download</button>
             </section>
           </div>
          

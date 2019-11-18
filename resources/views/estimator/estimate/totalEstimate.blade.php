@@ -13,8 +13,8 @@
     <section class="content">
     @include('includes\messages')
             <!-- /.box-header -->
-            <label for="inputTitle">Project Title</label>
-            <input type="text" class="form-control"  placeholder="Title">
+            {!! Form::open()->route('estimator.estimate.task')!!}
+            {!! Form::select( 'project_name','Choose your project', $projects ?? [])  !!}
             <label for="inputTitle">Total Cost</label>
             <input type="text" class="form-control"  placeholder="Cost">
             <div class="box-body card">
@@ -36,10 +36,30 @@
                 </tr>
                 </thead>
                 <tbody>
-               
+                @foreach($materials as $material)
+                @foreach($works as $work)
+                <tr>
+                  <th>{{ $loop->index +1 }}</th>
+                  <th>{{ $work->task }}</th>
+                  <th>{{ $work->description }}</th>
+                  <th>Days</th>
+                  <th>{{ $work->rate }}</th>
+                  <th>Labour Cost</th>
+                  <th>{{ $material->MatName }}</th>
+                  <th>{{ $material->MatType }}</th>
+                  <th>Unit</th>
+                  <th>{{ $material->UnitPrice }}</th>
+                  <th>Material Cost</th>
+                  <th>Total</th>
+                </tr>
+                @endforeach
+                @endforeach
                 </tbody>
                
               </table>
+              {!!Form::reset("Clear form")!!}
+              {!!Form::submit("save")!!}
+              {!! Form::close() !!}
             </div>
             <button class="btn"><i class="fa fa-download"></i> Download</button>
             <!-- /.box-body -->

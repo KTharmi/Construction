@@ -4,10 +4,10 @@ namespace App;
 use App\Project;
 use Illuminate\Database\Eloquent\Model;
 
-class Material extends Model
+class Material_assignment extends Model
 {
     public function projects()
     {
-          return $this->hasMany(Project::class);
+          return $this->belongsTo(Project::class);
      }
 }

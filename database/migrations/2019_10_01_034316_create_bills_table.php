@@ -14,8 +14,8 @@ class CreateBillsTable extends Migration
     public function up()
     {
         Schema::create('bills', function (Blueprint $table) {
-            $table->bigIncrements('BillNo');
-            $table->string('BillId',50)->index()->unique();
+            $table->bigIncrements('id');
+            $table->string('BillNo',50)->index()->unique();
             $table->double('Total',8,2);
             $table->timestamps();
         });

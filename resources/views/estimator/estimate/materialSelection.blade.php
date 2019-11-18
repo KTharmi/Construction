@@ -6,36 +6,34 @@
             <div>
             <h2> HAYANY Construction </h2>
             <p>Customer Materials Requisition Form</p>
-            {!! Form::open() !!}
-            {!! Form::select( 'project_name','Choose your project') !!}
-            {!! Form::select( 'project_id','project id')->readonly() !!}
-             
+            {!! Form::open()->route('estimator.estimate.selectionStore')!!}
+            {!! Form::select( 'project_name','Choose your project', $projects ?? [])  !!}
             <div class="box-body card">
               <table id="example1" class="table table-bordered">
                 <thead>
                 <tr>
                   <th>S.NO</th>
+                  <th>Select</th>
                   <th>Material Type</th>
                   <th>Material Name</th>
                   <th>Unit</th>
-                  <th>Select</th>
                 </tr>
                 </thead>
                 <tbody>
-                
+                @foreach($materials as $material)
                   <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>{!!Form::checkbox('yes', 'YES')->inline()!!}
-                  </tr>
+                  <td>{{ $loop->index +1 }}</td>
+                  <td> <input type="checkbox" name="yes[]" value="YES"> SELECTED<br></td>
+                  <td>{{ $material->MatName }}</td>
+                  <td>{{ $material->MatType }}<input type="hidden" name="id[]" value="{{ $material->id }}"></td>
+                  <td>{{ $material->UnitPrice }}</td>
+                  
+                 @endforeach
                 </tbody>
                
               </table>
               {!!Form::reset("Clear form")!!}
-              {!!Form::submit("Send form")!!}
+              {!!Form::submit("save")!!}
               {!! Form::close() !!}
-            </div>
-            <button class="btn"><i class="fa fa-download"></i> Download</button>
             @endsection 
+  

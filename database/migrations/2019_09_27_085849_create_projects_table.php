@@ -20,9 +20,13 @@ class CreateProjectsTable extends Migration
             $table->longtext('description');
             $table->date('proStartDate');
             $table->date('proEndDate')->nullable();
+            $table->unsignedBigInteger('CustId');
+            $table->enum('is_active', ['Yes', 'No']);
             $table->timestamps();
 
-            
+            $table->foreign('CustId')
+            ->references('CustId')->on('customers')
+            ->onDelete('cascade');
         });
     }
 

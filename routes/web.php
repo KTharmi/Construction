@@ -60,6 +60,17 @@ Route::group(['middleware' => ['auth']],function(){
             Route::delete('destroy/{employee}', 'EmployeeController@destroy')->name('admin.employee.destroy');
          });
 
+         Route::group([ 'prefix' => '/customer'],function(){
+            Route::get('/view', 'CustomerController@index')->name('admin.customer.view');
+            Route::get('/create', 'CustomerController@create')->name('admin.customer.create');
+            Route::post('/', 'CustomerController@store')->name('admin.customer.store');
+            Route::get('/{customer}/edit', 'CustomerController@edit')->name('admin.customer.edit');
+            Route::patch('/update/{customer}', 'CustomerController@update')->name('admin.customer.update');
+            Route::get('/delete/{customer}', 'CustomerController@delete')->name('admin.customer.delete');
+            Route::delete('destroy/{customer}', 'CustomerController@destroy')->name('admin.customer.destroy');
+         });
+
+
          Route::group(['prefix' => '/labourer'],function(){
             Route::get('/view', 'LabourerController@index')->name('admin.labourer.view');
             Route::get('/create', 'LabourerController@create')->name('admin.labourer.create');
@@ -164,10 +175,17 @@ Route::group(['middleware' => ['auth']],function(){
 
          Route::group(['prefix' => '/estimate'],function(){
             Route::get('/materials', 'MaterialEstimateController@index')->name('estimator.estimate.material');
-            Route::get('/labourers', 'LabourerEstimateController@index')->name('estimator.estimate.labourer');
-            Route::get('/totalcost', 'Labourer_MaterialEstimateController@index')->name('estimator.estimate.totalcost');
             Route::get('/user/selection', 'MaterialEstimateController@selection')->name('estimator.estimate.selection');
+            Route::post('/user/selection/store', 'MaterialEstimateController@selectionStore')->name('estimator.estimate.selectionStore');
             
+            Route::get('/labourers', 'LabourerEstimateController@index')->name('estimator.estimate.labourer');
+            Route::get('/labourers/selection', 'LabourerEstimateController@create')->name('estimator.estimate.labourerStore');
+
+            
+            Route::get('/total', 'Labourer_MaterialEstimateController@index')->name('estimator.estimate.totalcost');
+
+            Route::get('/task', 'WorkEstimateController@index')->name('estimator.estimate.task');
+            Route::get('/task/selection', 'WorkEstimateController@create')->name('estimator.estimate.taskStore');
             Route::get('/labourerCost', 'BillController@labourercost')->name('estimator.bill.labourerCost');
             Route::get('/customer/invoice', 'BillController@invoice')->name('estimator.bill.invoice');
          });

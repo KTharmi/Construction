@@ -9,7 +9,7 @@
             {!! Form::open() ->route('admin.employee.store') !!}
             {!! Form::text('EmpName', 'Name')->placeholder('enter the employee name')->required() !!}
             {!! Form::text('EmpAddress', 'Address')->placeholder('enter the employee address')->required() !!}
-            {!! Form::text('EmpPhoneNo', 'Phone No')->placeholder('enter the employee phone no') ->required()!!}
+            {!! Form::tel('EmpPhoneNo', 'Phone No')->placeholder('enter the employee phone no') ->required()!!}
             {!! Form::select( 'UserId','Choose your username', $users ?? [])->required() !!}
             {!! Form::submit("Save") !!}
             {!! Form::close() !!}

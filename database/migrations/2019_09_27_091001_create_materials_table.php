@@ -16,7 +16,7 @@ class CreateMaterialsTable extends Migration
         Schema::create('materials', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('MatName',50);
-            $table->string('MatType',50);
+            $table->string('MatType',50)->unique();
             $table->double('UnitPrice',8,2)->nullable();
             $table->timestamps();
         });

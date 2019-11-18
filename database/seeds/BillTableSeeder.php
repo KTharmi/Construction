@@ -13,7 +13,7 @@ class BillTableSeeder extends Seeder
     {
         $bills = [
             [
-             'BillId' => 'S0001',
+             'BillNo' => 'S0001',
              'Total' => '10000.00',
             ]
 

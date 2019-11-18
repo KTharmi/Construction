@@ -26,15 +26,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($materials as $material)  
-                  <tr>
-                  <td>{{ $loop->index +1 }}</td>
-                  <td>{{ $material->MatName }}</td>
-                  <td>{{ $material->MatType }}</td>
-                  <td>{{ $material->UnitPrice }}</td>
-                  <td><a href="{{route('estimator.materialChoose.edit', $material->id)}}"><span class="btn btn-primary btn-circle btn-sm"><i class="fas fa-edit"></i></td>
-                  </tr>
-                  @endforeach
+                
                 </tbody>
                
               </table>

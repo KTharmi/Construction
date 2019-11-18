@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers\Estimator;
 
-use App\Labourer;
 use App\Project;
-use App\Http\Requests\LabourerStoreRequest;
+use App\Work;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class LabourerEstimateController extends Controller
+class WorkEstimateController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +17,8 @@ class LabourerEstimateController extends Controller
     public function index()
     {
         $projects = Project::get()->pluck('ProName','id')->toArray();
-        $labourers = Labourer::all();
-        return view('estimator.estimate.labourerEstimate',compact('projects','labourers'));
+        $works = Work::all();
+        return view('estimator.estimate.taskEstimate',compact('projects','works'));
     }
 
     /**
@@ -29,6 +28,7 @@ class LabourerEstimateController extends Controller
      */
     public function create()
     {
+        //
     }
 
     /**

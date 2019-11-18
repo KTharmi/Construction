@@ -61,14 +61,17 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Material Selection:</h6>
+            <a class="collapse-item" href="{{route('estimator.estimate.selection')}}">SELECTION</a>
             <h6 class="collapse-header">Material Estimating:</h6>
             <a class="collapse-item" href="{{route('estimator.estimate.material')}}">CREATE</a>
             <h6 class="collapse-header">Labourer Estimating:</h6>
             <a class="collapse-item" href="{{route('estimator.estimate.labourer')}}">CREATE</a>
+            <h6 class="collapse-header">Task Estimating:</h6>
+            <a class="collapse-item" href="{{route('estimator.estimate.task')}}">CREATE</a>
             <h6 class="collapse-header">Total Estimating:</h6>
             <a class="collapse-item" href="{{route('estimator.estimate.totalcost')}}">CREATE</a>
-            <h6 class="collapse-header">Total Estimating:</h6>
-            <a class="collapse-item" href="{{route('estimator.estimate.selection')}}">SELECTION</a>
+            
           </div>
         </div>
       </li>
