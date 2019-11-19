@@ -176,9 +176,9 @@
         <!--================Counter Area =================-->
         <section class="counter_area">
         	<div class="container">
-        		<div class="row m0 counter_inner">
+        		<div class="row counter_inner">
         			<div class="counter_item">
-        				<h4 class="counter">596</h4>
+        				<h4 class="counter"></h4>
         				<p>Projects Completed</p>
         			</div>
         			<div class="counter_item">
@@ -188,14 +188,6 @@
         			<div class="counter_item">
         				<h4 class="counter">5962</h4>
         				<p>On Going Projects</p>
-        			</div>
-        			<div class="counter_item">
-        				<h4 class="counter">1009</h4>
-        				<p>Future Projects</p>
-        			</div>
-        			<div class="counter_item">
-        				<h4 class="counter">435</h4>
-        				<p>In House Professionals</p>
         			</div>
         		</div>
         	</div>

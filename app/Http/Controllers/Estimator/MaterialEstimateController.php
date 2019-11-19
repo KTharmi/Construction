@@ -8,7 +8,6 @@ use App\Material_assignment;
 use App\Http\Requests\ProjectMaterialStoreRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
 
 class MaterialEstimateController extends Controller
 {
@@ -20,15 +19,20 @@ class MaterialEstimateController extends Controller
     public function index()
     {
         $projects = Project::get()->pluck('ProName','id')->toArray();
-        $materials = Material::all();
-        return view('estimator.estimate.materialEstimate',compact('materials','projects'));
+        $matId = Material_assignment::get()->pluck('MatId')->toArray();
+
+
+        return view('estimator/estimate/materialEstimate',compact('projects','proId'));
     }
 
     public function selection()
     {
-        $projects = Project::get()->pluck('ProName','id')->toArray();
-        $materials = Material::all();
-        return view('estimator.estimate.materialSelection', compact('materials','projects'));
+        
+            $projects = Project::get()->pluck('ProName','id')->toArray();
+            $materials = Material::all();
+            return view('estimator.estimate.materialSelection', compact('materials','projects'));
+       
+        
     }
     /**
      * Show the form for creating a new resource.
@@ -48,35 +52,18 @@ class MaterialEstimateController extends Controller
      */
     public function selectionStore(ProjectMaterialStoreRequest $request)
     {
-        //dd($request);
-      $material_assignment = new Material_assignment();
-      $ProId = $request->input('project_name');
-      $materialId = $request->input('id');
         
-      $type =$request->input('yes');
+        $type =$request->input('yes');
+        for($i=0; $i< count(collect($type)); $i++)
+        {
+         $material_assignment = new Material_assignment();
+         $num=(int)$type[$i];
+         $material_assignment->setAttribute('MatId', $num);
+         $material_assignment->setAttribute('ProId', $request->input('project_name'));
+         $material_assignment->save();
+         }
       
-      
-        //print_r($ProId);
-        
-        //$material_assignment->setAttribute('MatId', $request->input('id'));
-        $material_assignment->setAttribute('ProId', $ProId);
-        //$material_assignment->setAttribute('Qty', 2);
-
-        //$material_assignment->save();
-
-        
-                // $labourer->setAttribute('LabType', $request->input('LabType'));
-        // $labourer->setAttribute('LabPhoneNo', $request->input('LabPhoneNo'));
-        // $labourer->save();
-      
-         $m = DB::table('materials')
-                    ->whereIn('id', [1,2])
-                    ->get();
-
-                    print_r($m);
-
-      
-        return view('estimator.estimate.materialEstimate');
+        return response()->redirectToRoute('estimator.estimate.material');;
     }
 
     /**
@@ -87,7 +74,8 @@ class MaterialEstimateController extends Controller
      */
     public function show($id)
     {
-        //
+        $material_assignment = Material_assignment::all();
+
     }
 
     /**

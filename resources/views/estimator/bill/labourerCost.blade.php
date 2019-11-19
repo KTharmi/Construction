@@ -37,7 +37,15 @@
                 </tr>
                 </thead>
                 <tbody>
-               
+                @foreach($labourers as $labourer)
+                <tr>
+                  <th>{{ $loop->index +1 }}</th>
+                  <th>{{ $labourer->LabName }}</th>
+                  <th><input type="text" value="{{ $labour_assignments->WorkingHours ?? ''}}" name="days[]"></th>
+                  <th><input type="text" value="{{ $labour_assignments->unitprice ?? ''}}" name="unitprice[]"></th>
+                  <th><input type="text" value="{{ $labour_assignments->Salary ?? ''}}" name="Salary[]"></th>
+                </tr>
+                @endforeach
                 </tbody>
                
               </table>

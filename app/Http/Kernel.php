@@ -64,6 +64,8 @@ class Kernel extends HttpKernel
         'engineer' => \App\Http\Middleware\CheckEngineerRoleMiddleware::class,
         'CManager' => \App\Http\Middleware\CheckCManagerRoleMiddleware::class,
         'estimator' => \App\Http\Middleware\CheckEstimatorRoleMiddleware::class,
+        'architect' => \App\Http\Middleware\CheckArchitectRoleMiddleware::class,
+
     ];
 
     /**

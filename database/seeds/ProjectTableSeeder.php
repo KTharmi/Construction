@@ -18,17 +18,14 @@ class ProjectTableSeeder extends Seeder
              'ProAddress' => 'Vanni',
              'description' => '5square area',
              'proStartDate'=>'2019-10-01',
-<<<<<<< HEAD
              'CustId' => '1',
             ],
             [
-                'ProName' => 'akil',
-                'ProAddress' => 'Vsdni',
-                'description' => '5square aredsfa',
-                'proStartDate'=>'2019-10-01',
-                'CustId' => '2',
-               ]
-=======
+            'ProName' => 'akil',
+            'ProAddress' => 'Vsdni',
+            'description' => '5square aredsfa',
+            'proStartDate'=>'2019-10-01',
+            'CustId' => '2',
             ],
             [
                 'ProName' => 'House Building',
@@ -36,6 +33,7 @@ class ProjectTableSeeder extends Seeder
                 'description' => '10sq area',
                 'proStartDate'=>'2019-01-01',
                 'proEndDate' => '2019-05-10',
+                'CustId' => '1',
             ],
             [
                 'ProName' => 'Wall Painting',
@@ -43,17 +41,16 @@ class ProjectTableSeeder extends Seeder
                 'description' => '750m',
                 'proStartDate'=>'2019-10-01',
                 'proEndDate' => '2019-11-10',
+                'CustId' => '1',
             ],
             [
                 'ProName' => 'House Building',
                 'ProAddress' => 'Chavakachcheri',
                 'description' => '40 sq area',
                 'proStartDate' => '2019-09-10',
+                'CustId' => '2',
             ],
-            
->>>>>>> f25b272eb2f8a72d32cb5beb102384f8f2e8bffd
-
-            ];
+        ];
             foreach($projects as $project){
                 App\Project::create($project);
             }

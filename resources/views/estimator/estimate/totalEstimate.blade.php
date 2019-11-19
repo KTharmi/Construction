@@ -42,15 +42,15 @@
                   <th>{{ $loop->index +1 }}</th>
                   <th>{{ $work->task }}</th>
                   <th>{{ $work->description }}</th>
-                  <th>Days</th>
+                  <th><input type="text" value="{{ $material->unitprice ?? ''}}" name="unitprice[]"></th>
                   <th>{{ $work->rate }}</th>
-                  <th>Labour Cost</th>
+                  <th><input type="text" value="{{ $material->unitprice ?? ''}}" name="unitprice[]"></th>
                   <th>{{ $material->MatName }}</th>
                   <th>{{ $material->MatType }}</th>
-                  <th>Unit</th>
+                  <th><input type="text" value="{{ $material->unitprice ?? ''}}" name="unitprice[]"></th>
                   <th>{{ $material->UnitPrice }}</th>
-                  <th>Material Cost</th>
-                  <th>Total</th>
+                  <th><input type="text" value="{{ $material->unitprice ?? ''}}" name="unitprice[]"></th>
+                  <th><input type="text" value="{{ $material->unitprice ?? ''}}" name="unitprice[]"></th>
                 </tr>
                 @endforeach
                 @endforeach

@@ -15,7 +15,8 @@
             <!-- /.box-header -->
             {!! Form::open()!!}
             {!! Form::select( 'project_name','Choose your project', $projects ?? [])  !!}
-            <label for="inputTitle">Total Material Cost</label>
+            
+            <label for="inputTitle">Total Estimation Material Cost</label>
             <input type="text" class="form-control"  placeholder="Cost">
             <div class="box-body card">
               <table id="example1" class="table table-bordered">
@@ -30,7 +31,17 @@
                 </tr>
                 </thead>
                 <tbody>
-                
+                @foreach($materials as $material)
+                  <tr>
+                  <td>{{ $loop->index +1 }}</td>
+                  <td> <input type="checkbox" name="yes[]" value="{{ $material->id }}"> SELECT<br></td>
+                  <td>{{ $material->MatName }}</td>
+                  <td>{{ $material->MatType }}</td>
+                  <th><input type="text" value="{{ $material->unitprice ?? ''}}" name="unitprice[]"></th>
+                  <td>{{ $material->UnitPrice }}</td>
+                  <th><input type="text" value="{{ $material->Salary ?? ''}}" name="Salary[]"></th>
+                  </tr>
+                 @endforeach
                 </tbody>
                
               </table>

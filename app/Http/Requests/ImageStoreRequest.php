@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ProjectMaterialStoreRequest extends FormRequest
+class ImageStoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,7 @@ class ProjectMaterialStoreRequest extends FormRequest
     public function rules()
     {
         return [
-        //
+            'images' =>'required|array'
         ];
     }
 }

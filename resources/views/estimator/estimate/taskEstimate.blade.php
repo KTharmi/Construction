@@ -35,9 +35,9 @@
                   <th>{{ $loop->index +1 }}</th>
                   <th>{{ $work->task }}</th>
                   <th>{{ $work->description }}</th>
-                  <th>Days</th>
-                  <th>{{ $work->rate }}</th>
-                  <th>Total</th>
+                  <th><input type="text" value="{{ $works->WorkingHours ?? ''}}" name="days[]"></th>
+                  <th><input type="text" value="{{ $works->unitprice ?? ''}}" name="unitprice[]"></th>
+                  <th><input type="text" value="{{ $works->Salary ?? ''}}" name="Salary[]"></th>
                 </tr>
                 @endforeach
                 </tbody>

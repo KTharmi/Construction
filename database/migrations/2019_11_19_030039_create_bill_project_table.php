@@ -13,7 +13,7 @@ class CreateBillProjectTable extends Migration
      */
     public function up()
     {
-        Schema::create('_bill__project', function (Blueprint $table) {
+        Schema::create('bill_project', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('ProId')->index()->unique();
             $table->string('category');
@@ -27,8 +27,6 @@ class CreateBillProjectTable extends Migration
             $table->foreign('ProId')
             ->references('id')->on('Projects')
             ->onDelete('cascade');
-
-            
         });
     }
 
@@ -39,6 +37,6 @@ class CreateBillProjectTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_bill__project');
+        Schema::dropIfExists('bill_project');
     }
 }

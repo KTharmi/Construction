@@ -191,7 +191,8 @@ Route::group(['middleware' => ['auth']],function(){
             Route::get('/materials', 'MaterialEstimateController@index')->name('estimator.estimate.material');
             Route::get('/user/selection', 'MaterialEstimateController@selection')->name('estimator.estimate.selection');
             Route::post('/user/selection/store', 'MaterialEstimateController@selectionStore')->name('estimator.estimate.selectionStore');
-            
+            //Route::get('/user/selection/{project}/show', 'MaterialEstimateController@show')->name('estimator.estimate.show');
+
             Route::get('/labourers', 'LabourerEstimateController@index')->name('estimator.estimate.labourer');
             Route::get('/labourers/selection', 'LabourerEstimateController@create')->name('estimator.estimate.labourerStore');
 
@@ -207,13 +208,6 @@ Route::group(['middleware' => ['auth']],function(){
       });
 
    });
-
-   Route::group(['middleware' =>['CManager']],function(){
-      Route::group(['namespace' =>'CManager', 'prefix' => 'CManager'],function(){
-        // Route::get('/view', 'ProjectController@index')->name('CManager.project.view');
-      });
-
-   });
    
    Route::group(['middleware' =>['CManager']],function(){
       Route::group(['namespace' =>'Manager', 'prefix' => 'Manager'],function(){  
@@ -224,4 +218,13 @@ Route::group(['middleware' => ['auth']],function(){
 
    });      
    
+
+   Route::group(['middleware' =>['architect']],function(){
+      Route::group(['namespace' =>'Architect', 'prefix' => 'Architect'],function(){  
+            Route::get('/image-view', 'ImageController@index')->name('architect.image.view');
+            Route::get('/image-upload', 'ImageController@create')->name('architect.image.create');
+            Route::post('/image-store', 'ImageController@store')->name('architect.image.store');
+      });
+
+   }); 
 });

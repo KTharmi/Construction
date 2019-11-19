@@ -15,9 +15,9 @@ class CreateMaterialAssignmentsTable extends Migration
     {
         Schema::create('material_assignments', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('MatId')->index()->unique();
+            $table->unsignedBigInteger('MatId')->index();
             $table->unsignedBigInteger('ProId')->index();
-            $table->unsignedBigInteger('Qty');
+            $table->unsignedBigInteger('Qty')->nullable();
             $table->timestamps();
 
             $table->foreign('MatId')

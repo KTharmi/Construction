@@ -64,9 +64,7 @@
           <h6 class="collapse-header">Material Selection:</h6>
             <a class="collapse-item" href="{{route('estimator.estimate.selection')}}">SELECTION</a>
             <h6 class="collapse-header">Material Estimating:</h6>
-            <a class="collapse-item" href="{{route('estimator.estimate.material')}}">CREATE</a>
-            <h6 class="collapse-header">Labourer Estimating:</h6>
-            <a class="collapse-item" href="{{route('estimator.estimate.labourer')}}">CREATE</a>
+            <a class="collapse-item" href="{{route('estimator.estimate.material')}}">ESTIMATION</a>
             <h6 class="collapse-header">Task Estimating:</h6>
             <a class="collapse-item" href="{{route('estimator.estimate.task')}}">CREATE</a>
             <h6 class="collapse-header">Total Estimating:</h6>
