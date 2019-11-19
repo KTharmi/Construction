@@ -6,7 +6,7 @@
             <div>
             <h2> HAYANY Construction </h2>
             <p>Labourer Schedule</p>
-            {!! Form::open()!!}
+            {!! Form::open()->->route('CManager.labourerSch.store')!!}
             {!! Form::select( 'project_name','Choose your project', $projects ?? [])  !!}
             {!! Form::date( 'date','Current Date')  !!}
             <div class="box-body card">

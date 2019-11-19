@@ -51,7 +51,6 @@
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Schedules:</h6> 
-            <a class="collapse-item" href="404.html">Work Schedules</a>
             <a class="collapse-item" href="{{route('CManager.labourerSch.view')}}">Laborers Schedules</a>
           </div>
         </div>
