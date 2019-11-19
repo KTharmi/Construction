@@ -21,22 +21,6 @@
       <!-- Divider -->
       <hr class="sidebar-divider">
       <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-fw fa-wrench"></i>
-          <span>PROJECTS</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Project Site Model:</h6>
-            <a class="collapse-item" href="{{route('architect.image.view')}}">IMAGES</a>
-            <a class="collapse-item" href="{{route('architect.image.create')}}">IMAGES UPLOAD</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
 
       <!-- Heading -->
       <div class="sidebar-heading">
@@ -51,10 +35,8 @@
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Bills:</h6> 
-            <a class="collapse-item" href="404.html">Labour bill</a>
-            <a class="collapse-item" href="blank.html">Full bill</a>
-            <a class="collapse-item" href="blank.html">Invoice</a>
+            <a class="collapse-item" href="{{route('architect.image.view')}}">IMAGES</a>
+            <a class="collapse-item" href="{{route('architect.image.create')}}">IMAGES UPLOAD</a>
           </div>
         </div>
       </li>
