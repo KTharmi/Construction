@@ -220,7 +220,8 @@ Route::group(['middleware' => ['auth']],function(){
    Route::group(['middleware' =>['CManager']],function(){
       Route::group(['namespace' =>'Manager', 'prefix' => 'Manager'],function(){  
             Route::get('/view', 'LaborerController@index')->name('CManager.labourerSch.view');
-            Route::get('/store', 'LaborerController@store')->name('CManager.labourerSch.store');
+            Route::post('/store', 'LaborerController@store')->name('CManager.labourerSch.store');
+            Route::get('/{projectid}/details-view', 'LaborerController@show')->name('CManager.labourerSch.show');
             
             Route::get('/project-note', 'NoteController@note')->name('CManager.project.projectNote');
             Route::post('/project-store', 'NoteController@store')->name('CManager.project.Store');

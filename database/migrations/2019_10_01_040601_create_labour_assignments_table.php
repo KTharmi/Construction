@@ -15,7 +15,7 @@ class CreateLabourAssignmentsTable extends Migration
     {
         Schema::create('labour_assignments', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('LabId')->index()->unique();
+            $table->unsignedBigInteger('LabId')->index();
             $table->unsignedBigInteger('ProId')->index()->unique();
             $table->double('WorkingHours',4,2);
             $table->double('Salary',8,2);
