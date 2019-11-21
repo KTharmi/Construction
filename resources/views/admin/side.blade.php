@@ -33,28 +33,28 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header"> Users:</h6>
-            <a class="collapse-item" href="{{route('admin.user.create')}}">CREATE</a>
-            <a class="collapse-item" href="{{route('admin.user.view')}}">READ</a>
+            <a class="collapse-item" href="{{route('admin.user.create')}}">Add User</a>
+            <a class="collapse-item" href="{{route('admin.user.view')}}">View Users</a>
           </div>
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header"> Employees:</h6>
-            <a class="collapse-item" href="{{route('admin.employee.create')}}">CREATE</a>
-            <a class="collapse-item" href="{{route('admin.employee.view')}}">READ</a>
+            <a class="collapse-item" href="{{route('admin.employee.create')}}">Add Employee</a>
+            <a class="collapse-item" href="{{route('admin.employee.view')}}">View Employees</a>
           </div>
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header"> Laborers:</h6>
-            <a class="collapse-item" href="{{route('admin.labourer.create')}}">CREATE</a>
-            <a class="collapse-item" href="{{route('admin.labourer.view')}}">READ</a>
+            <h6 class="collapse-header"> Labourer:</h6>
+            <a class="collapse-item" href="{{route('admin.labourer.create')}}">Add Labourer</a>
+            <a class="collapse-item" href="{{route('admin.labourer.view')}}">View Labourers</a>
           </div>
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header"> Customers:</h6>
-            <a class="collapse-item" href="{{route('admin.customer.create')}}">CREATE</a>
-            <a class="collapse-item" href="{{route('admin.customer.view')}}">READ</a>
+            <a class="collapse-item" href="{{route('admin.customer.create')}}">Add Customer</a>
+            <a class="collapse-item" href="{{route('admin.customer.view')}}">View Customers</a>
           </div>
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header"> Projects:</h6>
-            <a class="collapse-item" href="{{route('admin.project.create')}}">CREATE</a>
-            <a class="collapse-item" href="{{route('admin.project.view')}}">READ</a>
+            <a class="collapse-item" href="{{route('admin.project.create')}}">Add Project</a>
+            <a class="collapse-item" href="{{route('admin.project.view')}}">View Projects</a>
           </div>
         </div>
       </li>
@@ -68,13 +68,13 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header"> Material:</h6>
-            <a class="collapse-item" href="{{route('admin.material.create')}}">CREATE</a>
-            <a class="collapse-item" href="{{route('admin.material.view')}}">READ</a>
+            <a class="collapse-item" href="{{route('admin.material.create')}}">Add Material</a>
+            <a class="collapse-item" href="{{route('admin.material.view')}}">View Materials</a>
           </div>
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header"> Tasks:</h6>
-            <a class="collapse-item" href="{{route('admin.task.create')}}">CREATE</a>
-            <a class="collapse-item" href="{{route('admin.task.view')}}">READ</a>
+            <a class="collapse-item" href="{{route('admin.task.create')}}">Add Task</a>
+            <a class="collapse-item" href="{{route('admin.task.view')}}">View Tasks</a>
           </div>
         </div>
       </li>
@@ -96,7 +96,7 @@
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Bills:</h6> 
-            <a class="collapse-item" href="404.html">Labour bill</a>
+            <a class="collapse-item" href="404.html">Labourer bill</a>
             <a class="collapse-item" href="{{route('admin.bill.view')}}">Full bill</a>
             <a class="collapse-item" href="blank.html">Invoice</a>
             <h6 class="collapse-header">Reports:</h6> 
@@ -104,10 +104,10 @@
             <a class="collapse-item" href="blank.html">Anual Report</a>
             <h6 class="collapse-header">Salaries:</h6> 
             <a class="collapse-item" href="404.html">Employee</a>
-            <a class="collapse-item" href="blank.html">Laborers</a>
+            <a class="collapse-item" href="blank.html">Labourers</a>
             <h6 class="collapse-header">Schedules:</h6> 
             <a class="collapse-item" href="404.html">Work Schedules</a>
-            <a class="collapse-item" href="blank.html">Laborers Schedules</a>
+            <a class="collapse-item" href="blank.html">Labourers Schedules</a>
           </div>
         </div>
       </li>

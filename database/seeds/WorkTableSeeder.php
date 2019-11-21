@@ -18,7 +18,7 @@ class WorkTableSeeder extends Seeder
              'task' => 'Floor painting',
              'description' => '1 square painting double coard',
              'Rate' => '500.00',
-            ]
+            ],
 
             ];
             foreach($works as $work){

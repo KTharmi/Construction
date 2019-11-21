@@ -22,7 +22,7 @@ class MaterialEstimateController extends Controller
         $matId = Material_assignment::get()->pluck('MatId')->toArray();
 
 
-        return view('estimator/estimate/materialEstimate',compact('projects','proId'));
+        return view('estimator/estimate/materialEstimate',compact('projects','id'));
     }
 
     public function selection()

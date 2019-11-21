@@ -32,23 +32,23 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header"> Materials:</h6>
-            <a class="collapse-item" href="{{route('estimator.material.create')}}">CREATE</a>
-            <a class="collapse-item" href="{{route('estimator.material.view')}}">READ</a>
+            <a class="collapse-item" href="{{route('estimator.material.create')}}">Add Material</a>
+            <a class="collapse-item" href="{{route('estimator.material.view')}}">View Materials</a>
           </div>
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header"> Labourers:</h6>
-            <a class="collapse-item" href="{{route('estimator.labourer.create')}}">CREATE</a>
-            <a class="collapse-item" href="{{route('estimator.labourer.view')}}">READ</a>
+            <a class="collapse-item" href="{{route('estimator.labourer.create')}}">Add Labourer</a>
+            <a class="collapse-item" href="{{route('estimator.labourer.view')}}">View Labourers</a>
           </div>
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header"> Tasks:</h6>
-            <a class="collapse-item" href="{{route('estimator.task.create')}}">CREATE</a>
-            <a class="collapse-item" href="{{route('estimator.task.view')}}">READ</a>
+            <a class="collapse-item" href="{{route('estimator.task.create')}}">Add Task</a>
+            <a class="collapse-item" href="{{route('estimator.task.view')}}">View Tasks</a>
           </div>
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header"> Equipments:</h6>
-            <a class="collapse-item" href="{{route('estimator.equipment.create')}}">CREATE</a>
-            <a class="collapse-item" href="{{route('estimator.equipment.view')}}">READ</a>
+            <a class="collapse-item" href="{{route('estimator.equipment.create')}}">Add Equipment</a>
+            <a class="collapse-item" href="{{route('estimator.equipment.view')}}">View Equipments</a>
           </div>
         </div>
       </li>
