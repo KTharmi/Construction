@@ -16,13 +16,13 @@ class NoteController extends Controller
     }
     public function store(Request $request)
     {
-        dd($request);
+       // dd($request);
     $note = new Note();
     $note->setAttribute('project_id', $request->input('project_name'));
     $note->setAttribute('date', $request->input('date'));
     $note->setAttribute('note', $request->input('note'));
     $note->save();
 
-    return ('SUCCESSFULLY SENT');
+    return view('CManager.project.notification');
     }
 }

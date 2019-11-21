@@ -42,6 +42,7 @@ class LaborerController extends Controller
     {
        
         $type =$request->input('yes');
+        
         for($i=0; $i< count(collect($type)); $i++)
         {
          $labourer_schedule = new Labourer_schedule();
@@ -51,8 +52,9 @@ class LaborerController extends Controller
          $labourer_schedule->setAttribute('WorkingDate', $request->input('date'));
          $labourer_schedule->save();
          }
-      
-        return response()->redirectToRoute('CManager.labourerSch.view');;
+         $proId =$request->input('project_name');
+         $projectid=Project::where('id', '=',  $proId )->first()->id;
+          return  redirect()->route('CManager.labourerSch.show' , ['projectid' =>$projectid ]);
     }
 
     /**
@@ -63,7 +65,11 @@ class LaborerController extends Controller
      */
     public function show($id)
     {
+        $labourer_schedule = Labourer_schedule::where('ProId',$id)->select('LabId')->with('labourers')->distinct()->get();
+        return view('CManager/schuduleview', compact('labourer_schedule'));
         //
+
+
     }
 
     /**

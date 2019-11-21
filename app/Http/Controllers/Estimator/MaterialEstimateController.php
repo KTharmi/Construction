@@ -64,7 +64,7 @@ class MaterialEstimateController extends Controller
         
           $projectid=Project::where('id', '=',  $proId )->first()->id;
           return  redirect()->route('estimator.estimate.show' , ['projectid' =>$projectid ]);
-        return response()->redirectToRoute('estimator.estimate.show' ,$projectid);
+       // return response()->redirectToRoute('estimator.estimate.show' ,$projectid);
     }
 
     /**
