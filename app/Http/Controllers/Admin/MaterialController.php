@@ -40,7 +40,7 @@ class MaterialController extends Controller
     {
         $material = new Material();
          $material->setAttribute('MatName', $request->input('MatName'));
-         $material->setAttribute('MatType', $request->input('MatType'));
+        // $material->setAttribute('MatType', $request->input('MatType'));
          $material->setAttribute('UnitPrice', $request->input('UnitPrice'));
          $material->save();
 
