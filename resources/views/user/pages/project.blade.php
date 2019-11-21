@@ -10,14 +10,16 @@
             <th>Name of the Project</th>
             <th>Project Location</th>
             <th>Project Description</th>
-            <th>Status</th>
+            <th>Started at</th>
+            <th>Ended at</th>
         </tr>
         @foreach($projects as $row)
         <tr>
             <td>{{$row['ProName']}}</td>
             <td>{{$row['ProAddress']}}</td>
             <td>{{$row['description']}}</td>
-            <td><option 'proEndDate'="null">Active</option>
+            <td>{{$row['proStartDate']}}</td>
+            <td>{{$row['proEndDate']}}</td>
             
             </td>
         </tr>
