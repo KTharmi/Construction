@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Estimator;
 
 use App\Project;
 use App\Work;
+use App\Work_assignment;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -39,7 +40,9 @@ class WorkEstimateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $work_assignments=Work_assignment::get();
+        
+        return view('estimator/estimate/taskEstimateCost', compact('work_assignments'));
     }
 
     /**

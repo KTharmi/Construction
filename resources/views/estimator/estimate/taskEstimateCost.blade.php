@@ -13,7 +13,7 @@
     <section class="content">
     @include('includes\messages')
             <!-- /.box-header -->
-            {!! Form::open()->route('estimator.estimate.taskStore')!!}
+            {!! Form::open()!!}
             {!! Form::select( 'project_name','Choose your project', $projects ?? [])  !!}
             <div class="box-body card">
               <table id="example1" class="table table-bordered">
@@ -24,16 +24,19 @@
                   <th>Task Description</th>
                   <th>Days</th>
                   <th>$/days</th>
+                  <th>Total</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($works as $work)  
+                @foreach($work_assignments as $work)  
                   <tr>
                   <td>{{ $loop->index +1 }}</td>
-                  <td>{{ $work->task }}</td>
-                  <td>{{ $work->description }}</td>
-                  <td><input type="number" name="{{ $work->id }}" value="Unit[]" ></td>
+                  <td>{{ $work_assignments->TaskId }}</td>
+                  <th></th>
+                  <td>{{ $work_assignments->Qty }}</td>
+                  <td><input type="number" name="{{ $work_assignments->id }}" value="Unit[]" ></td>
                   <td>{{ $work->rate }}</td>
+                  <td></td>
                   </tr>
                   @endforeach
                 </tbody>
