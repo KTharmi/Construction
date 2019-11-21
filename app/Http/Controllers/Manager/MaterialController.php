@@ -1,14 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Estimator;
+namespace App\Http\Controllers\Manager;
 
-use App\Labourer;
-use App\Project;
-use App\Http\Requests\LabourerStoreRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class LabourerEstimateController extends Controller
+class MaterialController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +14,7 @@ class LabourerEstimateController extends Controller
      */
     public function index()
     {
-        $projects = Project::get()->pluck('ProName','id')->toArray();
-        $labourers = Labourer::all();
-        return view('estimator.estimate.labourerEstimate',compact('projects','labourers'));
+        //
     }
 
     /**
@@ -29,6 +24,7 @@ class LabourerEstimateController extends Controller
      */
     public function create()
     {
+        //
     }
 
     /**

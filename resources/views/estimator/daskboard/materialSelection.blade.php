@@ -6,8 +6,7 @@
             <div>
             <h2> HAYANY Construction </h2>
             <p>Customer Materials Requisition Form</p>
-            {!! Form::open()->route('estimator.estimate.selectionStore')!!}
-            {!! Form::select( 'project_name','Choose your project', $projects ?? [])  !!}
+            {!! Form::open()->route('estimator.drap.materialStore')!!}
             <div class="box-body card">
               <table id="example1" class="table table-bordered">
                 <thead>

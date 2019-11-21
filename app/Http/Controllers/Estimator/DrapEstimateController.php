@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Estimator;
 
 use App\Material;
 use App\Project;
 use App\Work;
+use App\Dmaterial;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class BillController extends Controller
+class DrapEstimateController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,8 +20,7 @@ class BillController extends Controller
     {
         $projects = Project::get()->pluck('ProName','id')->toArray();
         $materials = Material::all();
-        $works = Work::all();
-        return view('admin/bills/fullBill', compact('materials','$projects','$works'));
+        return view('estimator/daskboard/materialSelection', compact('materials','projects'));
     }
 
     /**
@@ -30,7 +30,11 @@ class BillController extends Controller
      */
     public function create()
     {
-        //
+        $dmaterials = Dmaterial::all();
+        $id = Dmaterial::pluck('MatId')->toArray();
+        $material =Material::pluck('MatName')->where('id',$id );
+        dd($material);
+        return view('estimator/daskboard/materialamount', compact('dmaterials','material'));
     }
 
     /**
@@ -41,7 +45,16 @@ class BillController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+        $type =$request->input('yes');
+        for($i=0; $i< count(collect($type)); $i++)
+        {
+         $dmaterials = new Dmaterial();
+         $num=(int)$type[$i];
+         $dmaterials->setAttribute('MatId', $num);
+         $dmaterials->save();
+         }
+        return response()->redirectToRoute('estimator.drap.create' );
     }
 
     /**
@@ -89,12 +102,23 @@ class BillController extends Controller
         //
     }
 
-    public function labourercost()
+    public function workSelection()
     {
-        return view('admin.bill.labourerCost');
+        $works = Work::all();
+        return view('estimator/daskboard/workSelection', compact('works'));
     }
-    public function invoice()
+
+    public function workStore(Request $request)
     {
-        return view('admin.bill.invoice');
+        //$type =$request->input('id');
+        dd($type);
+        // for($i=0; $i< count(collect($type)); $i++)
+        // {
+        //  $dmaterials = new Dmaterial();
+        //  $num=(int)$type[$i];
+        //  $dmaterials->setAttribute('MatId', $num);
+        //  $dmaterials->save();
+        //  }
+        //return response()->redirectToRoute('estimator.drap.create' );
     }
 }

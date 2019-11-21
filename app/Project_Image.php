@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project_Image extends Model
 {
-    public function projects()
+     protected $table="project_images";
+    public function project()
     {
           return $this->belongsTo(Project::class);
      }

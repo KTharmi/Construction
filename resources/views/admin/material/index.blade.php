@@ -20,7 +20,6 @@
                 <tr>
                   <th>S.NO</th>
                   <th>Material Name</th>
-                  <th>Material Type</th>
                   <th>UnitPrice</th>
                   <th>Edit</th>
                   <th>Delete</th>
@@ -31,7 +30,6 @@
                   <tr>
                   <td>{{ $loop->index +1 }}</td>
                   <td>{{ $material->MatName }}</td>
-                  <td>{{ $material->MatType }}</td>
                   <td>{{ $material->UnitPrice }}</td>
                   <td><a href="{{route('admin.material.edit', $material->id)}}"><span class="btn btn-primary btn-circle btn-sm"><i class="fas fa-edit"></i></td>
                   <td><a href ="{{route('admin.material.delete', $material->id)}}"><span class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></span></a></td>

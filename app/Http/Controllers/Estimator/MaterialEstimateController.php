@@ -27,21 +27,20 @@ class MaterialEstimateController extends Controller
 
     public function selection()
     {
-        
             $projects = Project::get()->pluck('ProName','id')->toArray();
             $materials = Material::all();
             return view('estimator.estimate.materialSelection', compact('materials','projects'));
-       
-        
     }
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+       
+        $material_assignment = Material_assignment::get();
+        return view('estimator/estimate/materialEstimate', compact('material_assignment'));
     }
 
     /**
@@ -53,6 +52,7 @@ class MaterialEstimateController extends Controller
     public function selectionStore(ProjectMaterialStoreRequest $request)
     {
         
+        $proId =$request->input('project_name');
         $type =$request->input('yes');
         for($i=0; $i< count(collect($type)); $i++)
         {
@@ -62,8 +62,9 @@ class MaterialEstimateController extends Controller
          $material_assignment->setAttribute('ProId', $request->input('project_name'));
          $material_assignment->save();
          }
-      
-        return response()->redirectToRoute('estimator.estimate.material');;
+        
+          $projectid=Project::where('id', '=',  $proId )->pluck('id');
+        return response()->redirectToRoute('estimator.estimate.show' ,compact('projectid'));
     }
 
     /**
@@ -74,7 +75,6 @@ class MaterialEstimateController extends Controller
      */
     public function show($id)
     {
-        $material_assignment = Material_assignment::all();
 
     }
 

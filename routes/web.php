@@ -117,6 +117,9 @@ Route::group(['middleware' => ['auth']],function(){
 
          Route::group(['prefix' => '/bill'],function(){   
             Route::get('/view', 'BillController@index')->name('admin.bill.view');
+            
+            Route::get('/labourerCost', 'BillController@labourercost')->name('admin.bill.labourerCost');
+            Route::get('/customer/invoice', 'BillController@invoice')->name('admin.bill.invoice');
 
          });
 
@@ -191,18 +194,22 @@ Route::group(['middleware' => ['auth']],function(){
             Route::get('/materials', 'MaterialEstimateController@index')->name('estimator.estimate.material');
             Route::get('/user/selection', 'MaterialEstimateController@selection')->name('estimator.estimate.selection');
             Route::post('/user/selection/store', 'MaterialEstimateController@selectionStore')->name('estimator.estimate.selectionStore');
-            //Route::get('/user/selection/{project}/show', 'MaterialEstimateController@show')->name('estimator.estimate.show');
-
-            Route::get('/labourers', 'LabourerEstimateController@index')->name('estimator.estimate.labourer');
-            Route::get('/labourers/selection', 'LabourerEstimateController@create')->name('estimator.estimate.labourerStore');
+            Route::get('/user/selection/{projectid}/show', 'MaterialEstimateController@create')->name('estimator.estimate.show');
 
             
             Route::get('/total', 'Labourer_MaterialEstimateController@index')->name('estimator.estimate.totalcost');
 
             Route::get('/task', 'WorkEstimateController@index')->name('estimator.estimate.task');
             Route::get('/task/selection', 'WorkEstimateController@create')->name('estimator.estimate.taskStore');
-            Route::get('/labourerCost', 'BillController@labourercost')->name('estimator.bill.labourerCost');
-            Route::get('/customer/invoice', 'BillController@invoice')->name('estimator.bill.invoice');
+
+            Route::get('/drap', 'DrapEstimateController@index')->name('estimator.drap.material');
+            Route::post('/drap/store', 'DrapEstimateController@store')->name('estimator.drap.materialStore');
+            Route::get('/drap/create', 'DrapEstimateController@create')->name('estimator.drap.create');
+
+            
+            Route::get('/drap/work/create', 'DrapEstimateController@workSelection')->name('estimator.drap.workCreate');
+            Route::post('/drap/work/store', 'DrapEstimateController@workStore')->name('estimator.drap.workStore');
+
          });
    
       });
@@ -224,6 +231,9 @@ Route::group(['middleware' => ['auth']],function(){
             Route::get('/image-view', 'ImageController@index')->name('architect.image.view');
             Route::get('/image-upload', 'ImageController@create')->name('architect.image.create');
             Route::post('/image-store', 'ImageController@store')->name('architect.image.store');
+            
+            Route::get('/uploadfile','UploadController@getView')->name('architect.file.create');;
+            Route::post('/insertfile',array('as'=>'insertfile','uses'=>'UploadController@insertFile'));
       });
 
    }); 

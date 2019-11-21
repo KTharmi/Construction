@@ -13,13 +13,11 @@ class MaterialTableSeeder extends Seeder
     {
         $materials = [
             [
-             'MatName' => 'Sand',
-             'MatType' => 'small-sand',
+             'MatName' => 'small-sand',
              'UnitPrice' => '15000',
             ],
             [
-                'MatName' => 'Sand',
-                'MatType' => 'large-sand',
+                'MatName' => 'large-sand',
                 'UnitPrice' => '13000',
             ]
 
