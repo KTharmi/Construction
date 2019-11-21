@@ -13,7 +13,7 @@
     <section class="content">
     @include('includes\messages')
             <!-- /.box-header -->
-            {!! Form::open()!!}
+            {!! Form::open()->route('estimator.estimate.unitStore')!!}
             {!! Form::select( 'project_name','Choose your project', $projects ?? [])  !!}
             
             <div class="box-body card">
@@ -29,8 +29,14 @@
                 @foreach($material_assignment as $material_assignment)  
                   <tr>
                   <td>{{ $loop->index +1 }}</td>
-                  <td>{{ $material_assignment->MatId }}</td>
-                  <td><input type="number" name="{{ $material_assignment->id }}" value="Unit[]" ></td>
+                  <td>@foreach($material_assignment->materials as $met)
+                        {{$met->MatName}}
+                        
+                    @endforeach
+                  </td>
+                  <td>
+                  <input type="hidden" name="mat[matid][]" value ="{{ $material_assignment->id }}" >
+                  <input type="number" name="mat[unit][]"  ></td>
                   </tr>
                   @endforeach
                
