@@ -1,6 +1,5 @@
-@extends('layouts/app')
-
-@section('content')
+@extends('CManager/app')
+@section('main-contend')
 @include('includes\messages')
             <!-- /.box-header -->
             <div>

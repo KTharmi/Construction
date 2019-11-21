@@ -36,10 +36,9 @@ class MaterialEstimateController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create($id)
     {
-       
-        $material_assignment = Material_assignment::get();
+            $material_assignment = Material_assignment::where('ProId',$id)->select('MatId')->with('materials')->distinct()->get();
         return view('estimator/estimate/materialEstimate', compact('material_assignment'));
     }
 
@@ -63,8 +62,9 @@ class MaterialEstimateController extends Controller
          $material_assignment->save();
          }
         
-          $projectid=Project::where('id', '=',  $proId )->pluck('id');
-        return response()->redirectToRoute('estimator.estimate.show' ,compact('projectid'));
+          $projectid=Project::where('id', '=',  $proId )->first()->id;
+          return  redirect()->route('estimator.estimate.show' , ['projectid' =>$projectid ]);
+        return response()->redirectToRoute('estimator.estimate.show' ,$projectid);
     }
 
     /**
@@ -73,8 +73,9 @@ class MaterialEstimateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
+
 
     }
 
@@ -96,9 +97,15 @@ class MaterialEstimateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function unitStore(Request $request)
     {
-        //
+        return $request;
+        $material_assignment->setAttribute('MatId', $num);
+         $material_assignment->setAttribute('ProId', $request->input('project_name'));
+         $material_assignment->setAttribute('Qty', $request->input('Unit'));
+         
+
+         $material_assignment->save();
     }
 
     /**
