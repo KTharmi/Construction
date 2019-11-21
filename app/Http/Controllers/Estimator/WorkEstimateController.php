@@ -40,7 +40,15 @@ class WorkEstimateController extends Controller
      */
     public function store(Request $request)
     {
-        $work_assignments=Work_assignment::get();
+        
+          $projectid=Project::where('id', '=',  $proId )->first()->id;
+          return  redirect()->route('estimator.estimate.show' , ['projectid' =>$projectid ]);
+
+        $work_assignment = new Work_assignment();
+         $work_assignment->setAttribute('MatId', $id);
+         $work_assignment->setAttribute('ProId', $request->input('project_name'));
+         $work_assignment->setAttribute('Qty', $request->input('Unit'));
+         $work_assignment->save();
         
         return view('estimator/estimate/taskEstimateCost', compact('work_assignments'));
     }

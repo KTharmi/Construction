@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Architect;
 
 
+
 use App\Project;
 use App\Project_Image;
 use App\Http\Requests\ImageStoreRequest;
@@ -28,11 +29,23 @@ class ImageController extends Controller
     }
     public function store(ImageStoreRequest $request)
     {
-        
+        dd($request);
+        if( $request->hasFile('images')){ 
+            $image = $request->file('images'); 
+            $fileName = $image->getClientOriginalName();
+        $fileExtension = $image->getClientOriginalExtension();
+            dd($fileExtension); 
+        } else {
+            dd('No image was found');
+         }
+
+
+
+
         $images = $request->input('images');
         $imagePath = 'public/projects';
         foreach ($images as $image){
-            $extension = $image->getClientOriginalExtension();
+            $extension = $image ->getClientOriginalExtension();
             $project_images = Project_Image::create([
                 'name' => $image->getClientOriginalName(),
                 'extension' => $extension,

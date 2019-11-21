@@ -201,7 +201,9 @@ Route::group(['middleware' => ['auth']],function(){
             Route::get('/total', 'Labourer_MaterialEstimateController@index')->name('estimator.estimate.totalcost');
 
             Route::get('/task', 'WorkEstimateController@index')->name('estimator.estimate.task');
-            Route::get('/task/selection', 'WorkEstimateController@store')->name('estimator.estimate.taskStore');
+            Route::post('/task/selection', 'WorkEstimateController@store')->name('estimator.estimate.taskStore');
+            Route::get('/task/selection/{projectid}/show', 'WorkEstimateController@create')->name('estimator.estimate.taskshow');
+
 
             Route::get('/drap', 'DrapEstimateController@index')->name('estimator.drap.material');
             Route::post('/drap/store', 'DrapEstimateController@store')->name('estimator.drap.materialStore');
