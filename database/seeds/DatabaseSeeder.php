@@ -23,12 +23,13 @@ class DatabaseSeeder extends Seeder
              BillTableSeeder::class,
              //UserRoleTableSeeder::class,
              WorkTableSeeder::class,
-             DMaterialTableSeeder::class,
-             Labourer_AssignmentTableSeeder::class,
-             DTaskTableSeeder::class,
-             Material_AssignmentTableSeeder::class,
-             Work_AssignmentTableSeeder::class,
-             Labourer_ScheduleTableSeeder::class,
+             EquipmentTableSeeder::class,
+             //DMaterialTableSeeder::class,
+             //Labourer_AssignmentTableSeeder::class,
+             //DTaskTableSeeder::class,
+             //Material_AssignmentTableSeeder::class,
+             //Work_AssignmentTableSeeder::class,
+             //Labourer_ScheduleTableSeeder::class,
          ]);
     }
 }
