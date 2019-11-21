@@ -4,12 +4,12 @@ namespace App\Http\Controllers\Estimator;
 
 use App\Material;
 use App\Project;
-use App\Material_assignment;
-use App\Http\Requests\ProjectMaterialStoreRequest;
+use App\Work;
+use App\Dmaterial;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class MaterialEstimateController extends Controller
+class DrapEstimateController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,52 +19,42 @@ class MaterialEstimateController extends Controller
     public function index()
     {
         $projects = Project::get()->pluck('ProName','id')->toArray();
-        $matId = Material_assignment::get()->pluck('MatId')->toArray();
-
-
-        return view('estimator/estimate/materialEstimate',compact('projects','id'));
+        $materials = Material::all();
+        return view('estimator/daskboard/materialSelection', compact('materials','projects'));
     }
 
-    public function selection()
-    {
-            $projects = Project::get()->pluck('ProName','id')->toArray();
-            $materials = Material::all();
-            return view('estimator.estimate.materialSelection', compact('materials','projects'));
-    }
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
-       
-        $material_assignment = Material_assignment::get();
-        return view('estimator/estimate/materialEstimate', compact('material_assignment'));
+        $dmaterials = Dmaterial::all();
+        $id = Dmaterial::pluck('MatId')->toArray();
+        $material =Material::pluck('MatName')->where('id',$id );
+        dd($material);
+        return view('estimator/daskboard/materialamount', compact('dmaterials','material'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\ProjectMaterialStoreRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function selectionStore(ProjectMaterialStoreRequest $request)
+    public function store(Request $request)
     {
-        
-        $proId =$request->input('project_name');
+       
         $type =$request->input('yes');
         for($i=0; $i< count(collect($type)); $i++)
         {
-         $material_assignment = new Material_assignment();
+         $dmaterials = new Dmaterial();
          $num=(int)$type[$i];
-         $material_assignment->setAttribute('MatId', $num);
-         $material_assignment->setAttribute('ProId', $request->input('project_name'));
-         $material_assignment->save();
+         $dmaterials->setAttribute('MatId', $num);
+         $dmaterials->save();
          }
-        
-          $projectid=Project::where('id', '=',  $proId )->pluck('id');
-        return response()->redirectToRoute('estimator.estimate.show' ,compact('projectid'));
+        return response()->redirectToRoute('estimator.drap.create' );
     }
 
     /**
@@ -75,7 +65,7 @@ class MaterialEstimateController extends Controller
      */
     public function show($id)
     {
-
+        //
     }
 
     /**
@@ -110,5 +100,25 @@ class MaterialEstimateController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function workSelection()
+    {
+        $works = Work::all();
+        return view('estimator/daskboard/workSelection', compact('works'));
+    }
+
+    public function workStore(Request $request)
+    {
+        //$type =$request->input('id');
+        dd($type);
+        // for($i=0; $i< count(collect($type)); $i++)
+        // {
+        //  $dmaterials = new Dmaterial();
+        //  $num=(int)$type[$i];
+        //  $dmaterials->setAttribute('MatId', $num);
+        //  $dmaterials->save();
+        //  }
+        //return response()->redirectToRoute('estimator.drap.create' );
     }
 }

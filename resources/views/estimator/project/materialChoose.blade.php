@@ -20,13 +20,19 @@
                 <tr>
                   <th>S.NO</th>
                   <th>Material Name</th>
-                  <th>Material Type</th>
                   <th>UnitPrice</th>
-                  <th>Selection</th>
+                  <th>Qty</th>
                 </tr>
                 </thead>
                 <tbody>
-                
+                @foreach($material_assignments as $material_assignments)
+                  <tr>
+                  <td>{{ $loop->index +1 }}</td>
+                  <td>{{ $material_assignments->proId }}</td>
+                  <td>#</td>
+                  <td>#</td>
+                  </tr>
+                 @endforeach
                 </tbody>
                
               </table>

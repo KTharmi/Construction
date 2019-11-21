@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Estimator;
 use App\Project;
 use App\Material;
+use App\Material_assignment;
 use App\Http\Requests\ProjectStoreRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -54,10 +55,11 @@ class ProjectController extends Controller
         return view('estimator/project/projectDetails', compact('project'));
     }
     
-    public function materialChoose(Project $project)
+    public function materialChoose($id)
     {
-        $materials = Material::all();
-        return view('estimator/project/materialChoose', compact('project,, materials'));
+        
+        $material_assignments = Material_assignment::find($id)->toarray();
+        return view('estimator/project/materialChoose', compact('material_assignments'));
     }
     /**
      * Show the form for editing the specified resource.
@@ -67,7 +69,8 @@ class ProjectController extends Controller
      */
     public function edit($id)
     {
-        //
+        $materials = Material::all();
+        return view('estimator/project/edit', compact('materials'));
     }
 
     /**

@@ -88,4 +88,13 @@ class BillController extends Controller
     {
         //
     }
+
+    public function labourercost()
+    {
+        return view('admin.bill.labourerCost');
+    }
+    public function invoice()
+    {
+        return view('admin.bill.invoice');
+    }
 }

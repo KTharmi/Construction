@@ -9,11 +9,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
+      protected $table="projects";
     public function materials()
     {
           return $this->hasMany(Material::class);
      }
-     public function customers()
+     public function customer()
     {
           return $this->belongsTo(Customer::class);
      }

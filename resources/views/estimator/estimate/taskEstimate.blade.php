@@ -30,16 +30,16 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($works as $work)
-                <tr>
-                  <th>{{ $loop->index +1 }}</th>
-                  <th>{{ $work->task }}</th>
-                  <th>{{ $work->description }}</th>
-                  <th><input type="text" value="{{ $works->WorkingHours ?? ''}}" name="days[]"></th>
-                  <th><input type="text" value="{{ $works->unitprice ?? ''}}" name="unitprice[]"></th>
-                  <th><input type="text" value="{{ $works->Salary ?? ''}}" name="Salary[]"></th>
-                </tr>
-                @endforeach
+                @foreach($works as $work)  
+                  <tr>
+                  <td>{{ $loop->index +1 }}</td>
+                  <td>{{ $work->task }}</td>
+                  <td>{{ $work->rate }}</td>
+                  <td>{{ $work->description }}</td>
+                  <td><a href="{{route('admin.task.edit', $work->id)}}"><span class="btn btn-primary btn-circle btn-sm"><i class="fas fa-edit"></i></td>
+                  <td><a href ="{{route('admin.task.delete', $work->id)}}"><span class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></span></a></td>
+                  </tr>
+                  @endforeach
                 </tbody>
                
               </table>

@@ -24,7 +24,7 @@ class MaterialStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            
+            //
         ];
     }
 }

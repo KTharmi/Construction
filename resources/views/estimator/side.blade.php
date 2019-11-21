@@ -63,12 +63,8 @@
           <div class="bg-white py-2 collapse-inner rounded">
           <h6 class="collapse-header">Material Selection:</h6>
             <a class="collapse-item" href="{{route('estimator.estimate.selection')}}">SELECTION</a>
-            <h6 class="collapse-header">Material Estimating:</h6>
-            <a class="collapse-item" href="{{route('estimator.estimate.material')}}">ESTIMATION</a>
             <h6 class="collapse-header">Task Estimating:</h6>
             <a class="collapse-item" href="{{route('estimator.estimate.task')}}">CREATE</a>
-            <h6 class="collapse-header">Total Estimating:</h6>
-            <a class="collapse-item" href="{{route('estimator.estimate.totalcost')}}">CREATE</a>
             
           </div>
         </div>
@@ -92,13 +88,6 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Project Details:</h6> 
             <a class="collapse-item" href="{{route('estimator.project.view')}}">Project List</a>
-          </div>
-        </div>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Bills:</h6> 
-            <a class="collapse-item" href="{{route('estimator.bill.labourerCost')}}">labourer cost bill</a>
-            <a class="collapse-item" href="{{route('estimator.bill.invoice')}}">Full bill</a>
           </div>
         </div>
         

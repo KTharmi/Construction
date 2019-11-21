@@ -21,8 +21,7 @@
                   <th>Project Name</th>
                   <th>Project Address</th>
                   <th>View</th>
-                  <th>Choose Material</th>
-                  <th>Edit</th>
+                  <th>Choosed Material</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -33,7 +32,6 @@
                   <td>{{ $project->ProAddress }}</td>
                   <td><a href="{{route('estimator.project.show', $project->id)}}"><span class="btn btn-primary btn-circle btn-sm"><i class="fa fa-database" aria-hidden="true"></i></span></a></td>
                   <td><a href ="{{route('estimator.project.materialChoose', $project->id)}}"><span class="btn btn-danger btn-circle btn-sm"><i class="fa fa-th-list" aria-hidden="true"></i></span></a></td>
-                  <td><a href="#"><span class="btn btn-primary btn-circle btn-sm"><i class="fas fa-edit"></i></td>
                   </tr>
                   @endforeach
                 </tbody>
