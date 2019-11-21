@@ -13,28 +13,39 @@
     <section class="content">
     @include('includes\messages')
             <!-- /.box-header -->
-            {!! Form::open()!!}
+            {!! Form::open()->route('estimator.drap.unitStore')!!}
             <div class="box-body card">
               <table id="example1" class="table table-bordered">
                 <thead>
                 <tr>
                   <th>S.NO</th>
-                  <th>Material Type</th>
-                  <th>Unit</th>
+                  <th>Material Name</th>
                   <th>$/unit</th>
+                  <th>units</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($dmaterials as $dmaterial)
+                @foreach($dmaterials as $dmaterials)
                 <tr>
-                  <th>{{ $loop->index +1 }}</th>
-                  <th>{{ $dmaterial->id }}</th>
-                  <th>{{ $dmaterial-> materials->MatName}}</th>
+                  <td>{{ $loop->index +1 }}</td>
+                  <td>@foreach($dmaterials->materials as $met)
+                        {{$met->MatName}}
+                        
+                    @endforeach
+                  </td>
+                  <td>@foreach($dmaterials->materials as $met)
+                        {{$met->UnitPrice}}
+                        
+                    @endforeach
+                  </td>
+                  <td>
+                  <input type="hidden" name="mat[matid][]" value ="{{ $dmaterials->MatId }}" >
+                  <input type="number" name="mat[unit][]"  ></td>
                 </tr>
                 @endforeach
                 </tbody>
-               
               </table>
+              
               {!!Form::reset("Clear form")!!}
               {!!Form::submit("save")!!}
               {!! Form::close() !!}

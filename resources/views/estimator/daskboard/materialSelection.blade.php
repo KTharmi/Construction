@@ -14,7 +14,7 @@
                   <th>S.NO</th>
                   <th>Select</th>
                   <th>Material Name</th>
-                  <th>Unit</th>
+                  <th>Unit Price</th>
                 </tr>
                 </thead>
                 <tbody>

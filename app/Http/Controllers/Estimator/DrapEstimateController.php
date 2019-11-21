@@ -30,11 +30,9 @@ class DrapEstimateController extends Controller
      */
     public function create()
     {
-        $dmaterials = Dmaterial::all();
         $id = Dmaterial::pluck('MatId')->toArray();
-        $material =Material::pluck('MatName')->where('id',$id );
-        dd($material);
-        return view('estimator/daskboard/materialamount', compact('dmaterials','material'));
+        $dmaterials = Dmaterial::where('MatId',$id)->select('MatId')->with('materials')->get();
+        return view('estimator/daskboard/materialamount', compact('dmaterials'));
     }
 
     /**
@@ -120,5 +118,19 @@ class DrapEstimateController extends Controller
         //  $dmaterials->save();
         //  }
         //return response()->redirectToRoute('estimator.drap.create' );
+    }
+
+    public function unitStore(Request $request)
+    {
+       
+        $type =$request->input('MatId');
+        dd($type);
+        $dmaterials->setAttribute('MatId', $num);
+         $dmaterials->setAttribute('ProId', $request->input('project_name'));
+         $dmaterials->setAttribute('Qty', $request->input('Unit'));
+         
+
+         $dmaterials->save();
+
     }
 }

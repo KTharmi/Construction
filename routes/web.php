@@ -208,6 +208,7 @@ Route::group(['middleware' => ['auth']],function(){
             Route::get('/drap', 'DrapEstimateController@index')->name('estimator.drap.material');
             Route::post('/drap/store', 'DrapEstimateController@store')->name('estimator.drap.materialStore');
             Route::get('/drap/create', 'DrapEstimateController@create')->name('estimator.drap.create');
+            Route::post('/drap/unitStore', 'DrapEstimateController@unitStore')->name('estimator.drap.unitStore');
 
             
             Route::get('/drap/work/create', 'DrapEstimateController@workSelection')->name('estimator.drap.workCreate');

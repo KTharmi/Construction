@@ -11,30 +11,36 @@
 
     <!-- Main content -->
     <section class="content">
-    <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-4">
             <h3>{{ $project->ProName }}</h3>
         </div>
-    </div>
-    <div class="card pad">
-        <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <b>Name :</b>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 {{ $project->ProName }}
             </div>
 
-        </div>
-        <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <b>Description:</b>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 {{ $project->description }}
             </div>
-        </div>
-    </div>
+            <div class="col-md-4">
+                <b>Address :</b>
+            </div>
+            <div class="col-md-4">
+                {{ $project->ProAddress }}
+            </div>
+            <div class="col-md-4">
+                <b>Start Date :</b>
+            </div>
+            <div class="col-md-4">
+                {{ $project->proStartDate }}
+            </div>
+
+       
     <div>
     </section>
     </div> 

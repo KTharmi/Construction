@@ -22,7 +22,7 @@
                   <th>S.NO</th>
                   <th>Task</th>
                   <th>Task Description</th>
-                  <th>Days</th>
+                  <th>Units</th>
                   <th>$/days</th>
                 </tr>
                 </thead>

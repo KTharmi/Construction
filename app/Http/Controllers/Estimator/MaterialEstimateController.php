@@ -38,7 +38,7 @@ class MaterialEstimateController extends Controller
      */
     public function create($id)
     {
-            $material_assignment = Material_assignment::where('ProId',$id)->select('MatId')->with('materials')->distinct()->get();
+         $material_assignment = Material_assignment::where('ProId',$id)->select('MatId')->with('materials')->distinct()->get();
         return view('estimator/estimate/materialEstimate', compact('material_assignment'));
     }
 

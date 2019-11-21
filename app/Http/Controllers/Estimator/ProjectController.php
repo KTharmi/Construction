@@ -58,7 +58,7 @@ class ProjectController extends Controller
     public function materialChoose($id)
     {
         
-        $material_assignments = Material_assignment::find($id)->toarray();
+        $material_assignments = Material_assignment::find($id)->get();
         return view('estimator/project/materialChoose', compact('material_assignments'));
     }
     /**

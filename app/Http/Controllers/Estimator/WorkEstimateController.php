@@ -41,6 +41,9 @@ class WorkEstimateController extends Controller
     public function store(Request $request)
     {
         
+        $proId =$request->input('project_name');
+        $type =$request->input('Unit');
+        dd($type);
           $projectid=Project::where('id', '=',  $proId )->first()->id;
           return  redirect()->route('estimator.estimate.show' , ['projectid' =>$projectid ]);
 

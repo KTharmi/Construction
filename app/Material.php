@@ -3,7 +3,7 @@
 namespace App;
 use App\Project;
 use App\Material_assignment;
-use App\Drap_Material_Selection;
+use App\Dmaterial;
 use Illuminate\Database\Eloquent\Model;
 
 class Material extends Model
@@ -14,9 +14,9 @@ class Material extends Model
           return $this->hasMany(Project::class);
      }
 
-     public function drap_material_selection()
+     public function dmaterial()
     {
-        return $this->hasOne(Drap_Material_Selection::class);
+        return $this->hasOne(Dmaterial::class);
     }
     public function material_assignment(){
         return $this->hasMany(Material_assignment::class);

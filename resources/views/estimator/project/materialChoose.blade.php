@@ -20,7 +20,6 @@
                 <tr>
                   <th>S.NO</th>
                   <th>Material Name</th>
-                  <th>UnitPrice</th>
                   <th>Qty</th>
                 </tr>
                 </thead>
@@ -28,9 +27,12 @@
                 @foreach($material_assignments as $material_assignments)
                   <tr>
                   <td>{{ $loop->index +1 }}</td>
-                  <td>{{ $material_assignments->proId }}</td>
-                  <td>#</td>
-                  <td>#</td>
+                  <td>@foreach($material_assignments->materials as $met)
+                        {{$met->MatName}}
+                        
+                    @endforeach
+                  </td>
+                  <td>{{ $material_assignments->Qty }}</td>
                   </tr>
                  @endforeach
                 </tbody>
