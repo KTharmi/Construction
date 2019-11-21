@@ -164,7 +164,7 @@
         					</div>
         					<div class="team_name">
         						<h4>Sarangan</h4>
-        						<p>Site Engineer</p>
+        						<p>Construction Manager</p>
         					</div>
         				</div>
         			</div>
@@ -178,16 +178,24 @@
         	<div class="container">
         		<div class="row counter_inner">
         			<div class="counter_item">
-        				<h4 class="counter"></h4>
+        				<h4 class="counter">8</h4>
         				<p>Projects Completed</p>
         			</div>
         			<div class="counter_item">
-        				<h4 class="counter">552</h4>
+        				<h4 class="counter">8</h4>
         				<p>Really Happy Clients</p>
         			</div>
+					<div class="counter_item">
+        				<h4 class="counter">0</h4>
+        				<p>unsatisfied clients</p>
+        			</div>
         			<div class="counter_item">
-        				<h4 class="counter">5962</h4>
+        				<h4 class="counter">5</h4>
         				<p>On Going Projects</p>
+        			</div>
+						<div class="counter_item">
+        				<h4 class="counter">2</h4>
+        				<p>Projects Not Yet Started</p>
         			</div>
         		</div>
         	</div>
@@ -205,7 +213,7 @@
         			<div class="col-lg-4 col-md-6">
         				<div class="feature_item">
         					<h4><i class="lnr lnr-user"></i>Expert Technicians</h4>
-        					<p>We have well performing techinicians who are very talented in construction works</p>
+        					<p>We have well performing technicians who are very talented in construction works</p>
         				</div>
         			</div>
         			<div class="col-lg-4 col-md-6">
