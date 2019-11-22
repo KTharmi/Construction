@@ -7,7 +7,7 @@
             <p>Project Sketch image upload</p>
 
             
-            {!! Form::open()->route('architect.image.store')!!}
+            {!! Form::open()!!}
             {!! Form::select( 'project_name','Choose your project', $projects ?? [])  !!}
             {!! Form::file('images[]', 'Images')->attrs(['multiple' => true]) !!}
             {!!Form::reset("Clear form")!!}
