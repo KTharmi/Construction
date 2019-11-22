@@ -37,7 +37,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header"> Site Images:</h6>
-            <a class="collapse-item" href="{{route('CManager.project.projectNote')}}">PRESENT</a>
+            <a class="collapse-item" href="{{route('CManager.project.projectNote')}}">NOTE</a>
           </div>
           </div>
       </li>
