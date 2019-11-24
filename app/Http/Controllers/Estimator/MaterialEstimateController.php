@@ -38,7 +38,7 @@ class MaterialEstimateController extends Controller
      */
     public function create($id)
     {
-         $material_assignment = Material_assignment::where('ProId',$id)->select('MatId')->with('materials')->distinct()->get();
+          $material_assignment = Material_assignment::where('ProId',$id)->select('MatId')->with('materials')->distinct()->get();
         return view('estimator/estimate/materialEstimate', compact('material_assignment'));
     }
 
@@ -63,7 +63,7 @@ class MaterialEstimateController extends Controller
          }
         
           $projectid=Project::where('id', '=',  $proId )->first()->id;
-          return  redirect()->route('estimator.estimate.show' , ['projectid' =>$projectid ]);
+         return  redirect()->route('estimator.estimate.show' , ['projectid' =>$projectid ]);
        // return response()->redirectToRoute('estimator.estimate.show' ,$projectid);
     }
 
@@ -99,13 +99,32 @@ class MaterialEstimateController extends Controller
      */
     public function unitStore(Request $request)
     {
-        return $request;
-        $material_assignment->setAttribute('MatId', $num);
-         $material_assignment->setAttribute('ProId', $request->input('project_name'));
-         $material_assignment->setAttribute('Qty', $request->input('Unit'));
-         
+    //  return $request;
+    //  return  $type = $request->mat;
+       $maC=0;
+       $maU=0;
+     foreach ($request->matid as $ma)
+     {
+        $maU = 0;
+         foreach($request->unit as $unit){
+            if($maC == $maU)
+            {
+                $material_assignment = Material_assignment::where('MatId','=',$ma)->update(['Qty' => $unit]);
+            }
+            $maU++;
+         }
+         $maC++;
+     }
+    return view('estimator.estimate.view');
+        
+    }
+    public function view()
+    {
+       // $projects = Project::get()->pluck('ProName','id')->toArray();
+        //$matId = Material_assignment::get()->pluck('MatId')->toArray();
 
-         $material_assignment->save();
+
+        return view('estimator/estimate/materialEstimateCost');
     }
 
     /**

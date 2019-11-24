@@ -28,15 +28,17 @@
                 <tbody>
                 @foreach($material_assignment as $material_assignment)  
                   <tr>
+                  @foreach($material_assignment->materials as $met)
                   <td>{{ $loop->index +1 }}</td>
-                  <td>@foreach($material_assignment->materials as $met)
+                  <td>
                         {{$met->MatName}}
                         
-                    @endforeach
+                    
                   </td>
                   <td>
-                  <input type="hidden" name="mat[matid][]" value ="{{ $material_assignment->id }}" >
-                  <input type="number" name="mat[unit][]"  ></td>
+                  <input type="hidden" name="matid[]" value ="{{ $material_assignment->MatId }}" >
+                  <input type="number" name="unit[]"  ></td>
+                  @endforeach
                   </tr>
                   @endforeach
                

@@ -196,7 +196,7 @@ Route::group(['middleware' => ['auth']],function(){
             Route::post('/user/selection/store', 'MaterialEstimateController@selectionStore')->name('estimator.estimate.selectionStore');
             Route::get('/user/selection/{projectid}/show', 'MaterialEstimateController@create')->name('estimator.estimate.show');
             Route::post('/user/selection/unitStore', 'MaterialEstimateController@unitStore')->name('estimator.estimate.unitStore');
-
+            Route::get('/view', 'MaterialEstimateController@view')->name('estimator.estimate.view');
             
             Route::get('/total', 'Labourer_MaterialEstimateController@index')->name('estimator.estimate.totalcost');
 
